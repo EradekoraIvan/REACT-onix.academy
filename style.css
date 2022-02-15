@@ -1,0 +1,25 @@
+body{
+    background: #FFFFFF;
+    margin: 0 auto;
+    max-width: 1920px;
+    padding: 0;  
+}
+
+.wrapper{
+   max-width: 1295px;
+   margin: 0 auto;
+   padding: 0; 
+}
+
+h1{
+    text-align: center;
+}
+
+section{
+    max-width: 100%;
+    
+}
+
+.discription{
+    text-align: center;
+}
