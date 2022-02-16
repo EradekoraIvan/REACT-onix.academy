@@ -38,9 +38,9 @@ main{
 
 footer{
     background-color: seagreen;
-    max-height: 200px;
+    max-height: 300px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 
