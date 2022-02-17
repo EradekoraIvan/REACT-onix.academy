@@ -1,0 +1,47 @@
+html, body{
+    max-width: 100%;
+    margin: 0;
+    height: 100%;
+   
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-screen{
+    max-height: 896px;
+    background-color: aquamarine;
+}
+
+header{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+}
+.deskription{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main{
+    flex: 1 1 auto;
+}
+
+footer{
+    background-color: seagreen;
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
