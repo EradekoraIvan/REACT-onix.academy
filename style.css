@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Serif:100,200,300italic);
+
 
 html, body{
     max-width: 100%;
@@ -38,6 +40,9 @@ html, body{
     /*display: flex;
     flex-direction: column;*/
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
 }
 
 .bgfs{
@@ -133,7 +138,8 @@ nav{
 
 a{
   color: rgba(255, 255, 255, 1);
-  text-decoration: none; 
+  text-decoration: none;
+  transition: 0.3s; 
 }
 a:hover{
     text-decoration-line: underline;
@@ -185,6 +191,8 @@ a:hover{
 .slide-flex-wrapper{
     display: flex;
     justify-content: space-between;
+    font-family: "Roboto Serif";
+    
 }
 
 #btn_prev, #btn_next{
@@ -203,12 +211,66 @@ a:hover{
     justify-content: left;
 }
 
+h1{
+    font-family: "Roboto Serif";
+    font-size: 6vw;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.sider_text{
+    max-width: 680px;
+}
+
 .line_1{
     width: 500px;
 }
 
-.slider_img{
-    max-width: 30%;;
+.diskription_slider_img{
+    /*font-family: "Roboto Serif";*/
+    font-size: 3vw;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.prise_slider_img{
+    display: flex;
+    justify-content: space-between;
+    max-width: 15vw;
+    font-size: 1vw;
+}
+
+button{
+    width: 327px;
+    height: 50px;
+    background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
+    border: 0;
+}
+
+.img_container{
+    position: relative;
+    width: 460px;
+}
+
+.slide_img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 3;
+}
+
+
+.copper_pro{
+    /*position: relative;*/
+    text-align: end;
+    z-index: 2;
+    font-size: 8vw;
+    margin: 0;
+    padding: 0;
+    /*font-family: "Roboto Serif";*/
+    font-weight: 100;
+    line-height: 0.75;
 }
 /*Основное содержание*/
 main{
