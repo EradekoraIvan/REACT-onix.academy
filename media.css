@@ -1,0 +1,28 @@
+@media (min-width: 768px) and (max-width: 991px){
+
+    header{
+        grid-template-rows: 1fr 0.5fr 10fr;
+        height: 900px;
+    }
+
+    nav{
+        grid-column: 2/6;
+        grid-row: 2/3;
+        justify-self: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    h1{
+        font-size: 4.5rem;
+        margin-top: 161px;
+    }
+    
+    .line {
+        max-width: 80%;
+    }
+    .product_name_fs{
+        font-size: 44px;
+    }
+}
