@@ -74,6 +74,7 @@ nav{
     justify-content: space-between;
     max-width: 430px;
     margin-bottom: 7px;
+    z-index: 3;
 }
 
 a{
