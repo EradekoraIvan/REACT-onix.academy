@@ -26,3 +26,35 @@
         font-size: 44px;
     }
 }
+
+@media (min-width: 480px) and (max-width: 767px){
+    header{
+
+        grid-template-rows: 1fr 0.5fr 10fr;
+        /*height: 560px;*/
+    }
+
+    nav, .btn_next, .btn_prew{
+        display: none;
+    }
+    
+    h1{
+        font-size: 3rem;
+        margin-top: 60px;
+    }
+    
+    .line {
+        max-width: 80%;
+    }
+    .product_name_fs{
+        font-size: 30px;
+    }
+
+    .prise{
+        font-size: 20px;
+    }
+
+    button{
+        width: 185px;
+    }
+}
