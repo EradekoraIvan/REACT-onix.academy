@@ -9,9 +9,13 @@
         grid-column: 2/6;
         grid-row: 2/3;
         justify-self: center;
-        justify-content: space-between;
-        width: 100%;
+        justify-content: space-around;
+        min-width: 100%;
         margin-top: 20px;
+    }
+
+    .btn_next, .btn_prew{
+        display: none;
     }
     
     h1{

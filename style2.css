@@ -170,6 +170,10 @@ button{
     font-size: 18px;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .slider_img{
     grid-column: 4/6;
     grid-row: 2/-1;
