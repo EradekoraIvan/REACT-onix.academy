@@ -74,7 +74,7 @@
 
 @media (min-width: 320px) and (max-width: 480px){
     header{
-
+        max-height: 550px;
         grid-template-rows: 1fr 0.5fr 10fr;
     }
 
@@ -143,7 +143,7 @@
         right: 0;
         grid-column: 3/-1;
         max-width: none;
-        max-height: 55%;
+        max-height: 65%;
     }
 
     .user {
