@@ -72,7 +72,7 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 480px){
+@media (min-width: 220px) and (max-width: 480px){
     header{
         max-height: 550px;
         grid-template-rows: 1fr 0.5fr 10fr;
@@ -97,15 +97,6 @@
 
     #heart{
         display: none;
-    }
-
-    #shopping-cart::after{
-        content: "";
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: rebeccapurple;
-    border: 1px solid black;
     }
 
     .icon{
@@ -152,5 +143,9 @@
 
     .shopping-cart {
         background-position: -149px 7px;
+    }
+
+    .nav_mobail{
+        display: block;
     }
 }
