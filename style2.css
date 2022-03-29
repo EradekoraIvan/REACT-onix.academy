@@ -1,3 +1,4 @@
+/*ПЕРВЫЙ ЭКРАН*/
 html, body{
     max-width: 100%;
     margin: 0;
@@ -10,7 +11,7 @@ header{
     position: relative;
     padding-top: 14px;
     display: grid;
-    grid-template-columns: 2fr 2fr 4fr 4fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
     grid-template-rows: 1fr 10fr;
     align-items: center;
     grid-column-gap: 10px;
@@ -219,5 +220,48 @@ button:hover{
     padding: 0;
     font-weight: 100;
     line-height: 0.75;
+}
+
+/*НАША ПРОДУКЦИЯ*/
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+h2{
+    text-align: center;
+    grid-column: 1/-1;
+
+}
+
+.our_production{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.kart{
+    height: 30vw;
+    position: relative;
+    box-shadow: #d6d6d4 0px 0px 12px;
+}
+
+.kart a img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.our_production a p{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.5vw;
 }
 

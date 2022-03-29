@@ -148,4 +148,22 @@
     .nav_mobail{
         display: block;
     }
+
+    /*НАША ПРОДУКЦИЯ*/
+
+    .our_production{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .kart{
+        height: 40vw;
+    }
+
+    .our_production a p{
+        font-size: 4vw;
+        margin-bottom: 10px;
+    }
 }
+
+
+
