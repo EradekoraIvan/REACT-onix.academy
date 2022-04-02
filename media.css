@@ -70,6 +70,14 @@
     button{
         width: 185px;
     }
+    /*ЛУЧШИЕ ПРОДАЖИ*/
+    ul{
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: column;
+    }
+    .strelka-left-3, .strelka-right-3{
+        display: none;
+    }
 }
 
 @media (min-width: 220px) and (max-width: 480px){
