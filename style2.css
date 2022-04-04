@@ -1,8 +1,26 @@
 /*ПЕРВЫЙ ЭКРАН*/
+
+@font-face {
+    font-family: 'fontb7ae0d38a8eb699e0938a474bf8e0aa5';
+        
+        src:    url('https://nomail.com.ua/files/eot/b7ae0d38a8eb699e0938a474bf8e0aa5.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/b7ae0d38a8eb699e0938a474bf8e0aa5.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/b7ae0d38a8eb699e0938a474bf8e0aa5.woff2') format('woff2');
+    }
+
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@import url(https://fonts.googleapis.com/css?family=El+Messiri:regular);
+
 html, body{
     max-width: 100%;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Rubik";
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "El+Messiri";
 }
 
 
@@ -219,6 +237,7 @@ button:hover{
     font-size: 8vw;
     margin: 0;
     padding: 0;
+    font-family: "El+Messiri";
     font-weight: 100;
     line-height: 0.75;
 }
@@ -336,7 +355,7 @@ main h2{
     background: linear-gradient(92.18deg, #E4A16F 20.13%, #5E3928 92.93%);
 }
 
-ul{
+section ul{
     grid-column: 2/3;
     grid-row: 2/3;
     margin: 0;
@@ -345,6 +364,8 @@ ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+    grid-auto-flow: dense;
+    overflow: hidden;
 }
 
 li{
@@ -514,6 +535,11 @@ section .circle{
 
 .why_choose_us{
     background: #f1f1f1;
+    padding-bottom: 30px;
+}
+
+.why_choose_us h3{
+    font-size: 18px;
 }
 
 .why_choose_us ul{
@@ -523,11 +549,18 @@ section .circle{
     font-size: 14px;
 }
 
+.why_choose_us li img{
+    max-width: 60px;
+}
+
 summary{
     background: linear-gradient(65.81deg, #5E3928 -24.09%, #E4A16F 104.02%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 10px;
 }
 details summary::-webkit-details-marker {
     display: none;
@@ -536,13 +569,122 @@ details > summary {
     list-style: none;
 }
 
-details summary:before {
+details summary::after{
     content: url(img/why_choose_us/down-chevron.png);
-    font-family: "Font Awesome 5 free";
-    margin-right: 7px;
+    margin-left: 5px;
+    cursor: pointer;
+    user-select: none;
   }
 
-  details[open] summary:before {
-    content: url(img/why_choose_us/down-chevron.png);
+  details[open] summary::after{
+    content: url(img/why_choose_us/left-chevron.png);
+}
+
+
+
+/*футер*/
+
+footer{
+    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    background-repeat: no-repeat;
+    min-height: 100%;
+    color: #dfdede;
+    padding: 20px;
+    font-family: 'fontb7ae0d38a8eb699e0938a474bf8e0aa5';
+    letter-spacing: 1px;
     
-  }
+}
+
+.footer_wrapper{
+    grid-column: 2/3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+    align-items: center;
+}
+
+.footer_logo{
+    font-size: small;
+}
+
+.footer_logo img{
+    max-width: 150px;
+}
+
+.footer_group{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+footer h3{
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+    font-size: small;
+    line-height: 180.4%;
+}
+
+footer a:hover{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+
+.footer_contacts li{
+    margin-bottom: 10px;
+}
+
+.socials{
+    position: relative;
+    width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.social{
+    max-width: 22px;
+    min-height: 20px;
+    background-image: url(img/footer/Group\ 82.svg);
+    background-repeat: no-repeat;
+}
+
+.twitter{
+    background-position: 1px 0px;
+}
+
+.facebook{
+    background-position: -34px 0px;
+}
+
+.instagram{
+    background-position: -64px 0px;
+}
+
+.up{
+    background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
+    transform: rotate(90deg);
+    width: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3/4;
+    align-self: flex-end;
+    justify-self: left;
+    cursor: pointer;
+    user-select: none;
+}
+
+.up:hover{
+    text-decoration: none;
+}
+
+
+
+
