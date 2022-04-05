@@ -485,7 +485,7 @@ section .circle{
     align-self: center;
 }
 
-.stock h1{
+.stock h2{
     margin: 0;
     font-size: 100px;
 }
