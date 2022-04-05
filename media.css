@@ -14,7 +14,7 @@
         margin-top: 20px;
     }
 
-    .btn_next, .btn_prew{
+    .btn_next, .btn_prew, .arrow-left-3, .arrow-right-3{
         display: none;
     }
     
@@ -29,9 +29,15 @@
     .product_name_fs{
         font-size: 44px;
     }
+
+    /*ПОЧЕМУ ВЫБИРАЮТ НАС*/
+
+    .why_choose_us ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-@media (min-width: 480px) and (max-width: 767px){
+@media (min-width: 480px) and (max-width: 768px){
     header{
 
         grid-template-rows: 1fr 0.5fr 10fr;
@@ -71,12 +77,27 @@
         width: 185px;
     }
     /*ЛУЧШИЕ ПРОДАЖИ*/
-    ul{
-        grid-template-columns: 1fr 1fr;
-        grid-auto-flow: column;
-    }
-    .strelka-left-3, .strelka-right-3{
+    
+    .arrow-left-3, .arrow-right-3{
         display: none;
+    }
+
+    /*ПОЧЕМУ ВЫБИРАЮТ НАС*/
+
+    .why_choose_us ul{
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: row;
+        font-size: 12px;
+    }
+
+    /*footer*/
+
+    .footer_logo{
+        grid-row: 1/2;
+    }
+
+    .footer_group{
+        grid-row: 2/3;
     }
 }
 
@@ -170,6 +191,32 @@
     .our_production a p{
         font-size: 4vw;
         margin-bottom: 10px;
+    }
+
+    .arrow-left-3, .arrow-right-3{
+        display: none;
+    }
+
+    /*ПОЧЕМУ ВЫБИРАЮТ НАС*/
+
+    .why_choose_us ul{
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: row;
+        font-size: 12px;
+    }
+
+    /*footer*/
+
+    .footer_logo{
+        grid-row: 1/2;
+    }
+
+    .footer_group{
+        grid-row: 2/3;
+    }
+
+    .footer_catalpg{
+        grid-row: 3/4;
     }
 }
 
