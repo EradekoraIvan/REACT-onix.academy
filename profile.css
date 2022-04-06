@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'fontb7ae0d38a8eb699e0938a474bf8e0aa5';
+        
+        src:    url('https://nomail.com.ua/files/eot/b7ae0d38a8eb699e0938a474bf8e0aa5.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/b7ae0d38a8eb699e0938a474bf8e0aa5.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/b7ae0d38a8eb699e0938a474bf8e0aa5.woff2') format('woff2');
+    }
+
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@import url(https://fonts.googleapis.com/css?family=El+Messiri:regular);
+
+html, body{
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik";
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "El+Messiri";
+}
+
+header{
+    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    height: 135px;
+    align-content: center;
+}
+
+.header_wrapper{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.logo{
+    max-width: 8.333rem;
+    max-height: 34px;
+    margin-right: 60px;
+    margin-bottom: 9px;
+}
+
+nav{
+    grid-column: 2/3;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 430px;
+    margin-bottom: 3px;
+}
+
+a{
+    color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover{
+    text-decoration-line: underline;
+    color: rgb(179, 116, 87);
+}
+
+.icons_list{
+    grid-column: 3/4;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-self: flex-end;
+    justify-self: right;
+    margin-left: 20px;
+}
+
+.icon{
+    background-image: url(img/img_1screen/nav/icons.png);
+    width: 2.5rem;
+    height: 77px;
+    margin-top: -106px;
+    margin-bottom: -8px;
+    padding-top: 4px;
+    transition: transform 0.5s;
+    align-self: center;
+    margin-left: 12px;
+    color: #CB8D62;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart{
+    background-position: -5px 7px;
+}
+
+.user{
+    background-position: -75px 7px;
+}
+
+
+.shopping-cart{
+    background-position: -145px 7px;
+}
+
+.heart:hover, .user:hover, .shopping-cart:hover{
+    transform: translate(0,-20%);
+    -webkit-transform: translate(0,-20%); 
+    -o-transform: translate(0,-20%); 
+    -moz-transform: translate(0,-20%);
+}
+
+.nav_mobail{
+    position: absolute;
+    top: 27px;
+    right: 0;
+    display: none;
+}
+
+/*ФУТЕР*/
+
+footer{
+    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    background-repeat: no-repeat;
+    min-height: 100%;
+    color: #dfdede;
+    padding: 20px 0px;
+    font-family: 'fontb7ae0d38a8eb699e0938a474bf8e0aa5';
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+.footer_wrapper{
+    grid-column: 2/3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+    justify-content: left;
+    align-items: center;
+}
+
+.footer_logo{
+    font-size: small;
+    min-width: 201px;
+}
+
+.footer_logo img{
+    max-width: 150px;
+}
+
+.footer_group{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    max-width: 460px;
+    justify-self: right;
+}
+
+footer h3{
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+    line-height: 220.4%;
+}
+
+footer a:hover{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+
+.footer_contacts li{
+    margin-bottom: 10px;
+}
+
+.socials{
+    position: relative;
+    width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.social{
+    max-width: 22px;
+    min-height: 20px;
+    background-image: url(img/footer/Group\ 82.svg);
+    background-repeat: no-repeat;
+}
+
+.twitter{
+    background-position: 1px 0px;
+}
+
+.facebook{
+    background-position: -34px 0px;
+}
+
+.instagram{
+    background-position: -64px 0px;
+}
+
+.up{
+    background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
+    transform: rotate(90deg);
+    width: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3/4;
+    align-self: flex-end;
+    justify-self: left;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 12px;
+}
+
+.up:hover{
+    text-decoration: none;
+}

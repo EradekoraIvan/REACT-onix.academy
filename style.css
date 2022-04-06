@@ -23,9 +23,13 @@ h1, h2, h3, h4, h5, h6{
     font-family: "El+Messiri";
 }
 
+h4{
+    font-weight: lighter;
+}
+
 
 header{
-    height: 650px;
+    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
     position: relative;
     padding-top: 14px;
     display: grid;
@@ -34,6 +38,7 @@ header{
     align-items: center;
     grid-column-gap: 10px;
     color: #FFFFFF;
+    z-index: 1;
 }
 
 .bgfs{
@@ -150,7 +155,7 @@ nav a:hover{
 
 .nav_mobail{
     position: absolute;
-    top: 14px;
+    top: 8px;
     right: 0;
     display: none;
 }
@@ -474,6 +479,7 @@ section .circle{
 /*СТОК*/
 
 .stock{
+    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
     color: #FFFFFF;
     height: 350px;
     align-items: center;
