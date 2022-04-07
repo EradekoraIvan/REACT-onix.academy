@@ -117,6 +117,107 @@ nav a:hover{
     display: none;
 }
 
+/*MAIN*/
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+.wrapper{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+h1{
+    grid-column: 1/4;
+    margin: 70px 0;
+}
+
+.tab{
+    grid-column: 1/2;
+}
+
+button{
+    text-decoration: none;
+    display: inline-grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    column-gap: 20px;
+    align-items: center;
+    padding-left: 15px;
+    font-size: inherit;
+    background: linear-gradient(285.45deg, #0B3F37 30.27%, #CB8D62 115.81%);
+    width: 250px;
+    height: 40px;
+    border: none;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.tab_btn{
+    margin-right: 70px;
+}
+
+.tab .btn_out{
+    background: #FFFFFF;
+    border: none;
+    font-weight: 700;
+    padding: 0;
+    color: black;
+}
+
+.content{
+    grid-column: 2/4;
+    max-width: 528px;
+}
+
+.avatar{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #8f8f8f;
+    background-image: url(img/person_icon/details.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+}
+
+.person{
+    display: grid;
+    grid-auto-flow: column;
+    margin-bottom: 22px;
+    justify-content: left;
+    gap: 20px;
+}
+
+input{
+    width: 246px;
+    height: 36px;
+    padding: 0;
+    margin: 0px 12px 20px 0;
+    display: inline-block;
+}
+
+.input_datetime, .input_password{
+    width: 112px;
+}
+
+.information{
+}
+
+.save{
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 70px;
+}
+
+.change_password, .save{
+    margin-right: 12px;
+}
+
 /*ФУТЕР*/
 
 footer{

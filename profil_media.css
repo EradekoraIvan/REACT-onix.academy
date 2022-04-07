@@ -110,6 +110,7 @@
     .up{
         grid-column: 2/3;
         justify-self: right;
+        position: absolute;
     }
 }
 
