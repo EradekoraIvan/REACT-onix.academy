@@ -123,7 +123,7 @@ nav a:hover{
 }
 
 .icon{
-    background-image: url(\\img/img_1screen/nav/icons.png);
+    background-image: url(img/img_1screen/nav/icons.png);
     width: 2.5rem;
     height: 80px;
     margin-top: -110px;
@@ -230,7 +230,7 @@ button:hover{
 }
 
 .dot:hover{
-    cursor: url(\\img/img_1screen/Cursor.png) 4 12, auto;
+    cursor: url(img/img_1screen/Cursor.png) 4 12, auto;
 }
 
 .copper_pro{
@@ -588,14 +588,14 @@ details > summary {
 }
 
 details summary::after{
-    content: url(\\img/why_choose_us/down-chevron.png);
+    content: url(img/why_choose_us/down-chevron.png);
     margin-left: 5px;
     cursor: pointer;
     user-select: none;
   }
 
   details[open] summary::after{
-    content: url(\\img/why_choose_us/left-chevron.png);
+    content: url(img/why_choose_us/left-chevron.png);
 }
 
 
@@ -669,7 +669,7 @@ footer a:hover{
 .social{
     max-width: 22px;
     min-height: 20px;
-    background-image: url(\\img/footer/Group\ 82.svg);
+    background-image: url(img/footer/Group\ 82.svg);
     background-repeat: no-repeat;
 }
 

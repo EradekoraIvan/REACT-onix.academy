@@ -19,3 +19,5 @@ tabs.addEventListener('click', e => {
         }
     }
 })
+console.log(tabs)
+console.log(content)
