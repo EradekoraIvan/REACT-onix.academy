@@ -104,10 +104,10 @@ nav a:hover{
 }
 
 .heart:hover, .user:hover, .shopping-cart:hover{
-    transform: translate(0,-20%);
-    -webkit-transform: translate(0,-20%); 
-    -o-transform: translate(0,-20%); 
-    -moz-transform: translate(0,-20%);
+    transform: translate(0,-10%);
+    -webkit-transform: translate(0,-10%); 
+    -o-transform: translate(0,-10%); 
+    -moz-transform: translate(0,-10%);
 }
 
 .nav_mobail{
@@ -213,7 +213,37 @@ input{
     padding-left: 5px;
     margin: 0px 12px 20px 0;
     display: inline-block;
+    outline: none;
 }
+/*пароль*/
+#user_password{
+    border: none;
+    width: 203px;
+    margin: 0px 12px 0px 0px;
+}
+
+.password_div{
+    height: 36px;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 2px;
+    margin: 0px 12px 20px 0px;
+    padding-right: 10px;
+    display: inline-block;
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.password_svg{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.look_click{
+    opacity: 0.9;
+}
+
+/*пароль*/
 
 .carddate_cvv{
     display: inline-block;
@@ -332,7 +362,32 @@ article img{
     font-weight: 600;
     font-size: 1.4vw;
 }
-  
+
+.page_number{
+    grid-column: 1/-1;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 20px;
+    justify-content: center;
+
+}
+
+.page_number div{
+    width: 20px;
+    height: 25px;
+    border: 2px solid #A1A1A1;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+}
+
+.page_number div.active{
+    background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
+    border: none;
+    width: 24px;
+    height: 29px;
+}
 
 /*ФУТЕР*/
 

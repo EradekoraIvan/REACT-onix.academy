@@ -5,6 +5,7 @@ const tabs = document.getElementById("tabs"),
     const chengeClass = el => {
         for(let i = 0; i < tabs.children.length; i++) {
             tabs.children[i].classList.remove('active');
+            
         }
         el.classList.add('active');
 }
@@ -19,5 +20,4 @@ tabs.addEventListener('click', e => {
         }
     }
 })
-console.log(tabs)
-console.log(content)
+
