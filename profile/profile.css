@@ -1,27 +1,33 @@
 @font-face {
     font-family: 'fontb7ae0d38a8eb699e0938a474bf8e0aa5';
-        
-        src:    url('https://nomail.com.ua/files/eot/b7ae0d38a8eb699e0938a474bf8e0aa5.eot?#iefix') format('embedded-opentype'),
-                url('https://nomail.com.ua/files/woff/b7ae0d38a8eb699e0938a474bf8e0aa5.woff') format('woff'),
-                url('https://nomail.com.ua/files/woff2/b7ae0d38a8eb699e0938a474bf8e0aa5.woff2') format('woff2');
-    }
+
+    src: url('https://nomail.com.ua/files/eot/b7ae0d38a8eb699e0938a474bf8e0aa5.eot?#iefix') format('embedded-opentype'),
+        url('https://nomail.com.ua/files/woff/b7ae0d38a8eb699e0938a474bf8e0aa5.woff') format('woff'),
+        url('https://nomail.com.ua/files/woff2/b7ae0d38a8eb699e0938a474bf8e0aa5.woff2') format('woff2');
+}
 
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 @import url(https://fonts.googleapis.com/css?family=El+Messiri:regular);
 
-html, body{
+html,
+body {
     max-width: 100%;
     margin: 0;
     box-sizing: border-box;
     font-family: "Rubik";
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "El+Messiri";
 }
-
-header{
+/*
+header {
     background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
@@ -29,20 +35,20 @@ header{
     align-content: center;
 }
 
-.header_wrapper{
+.header_wrapper {
     grid-column: 2/3;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
 }
 
-.logo{
+.logo {
     max-width: 8.333rem;
     max-height: 34px;
     margin-right: 60px;
     margin-bottom: 9px;
 }
 
-nav{
+nav {
     grid-column: 2/3;
     align-self: flex-end;
     display: flex;
@@ -52,18 +58,18 @@ nav{
     margin-bottom: 3px;
 }
 
-a{
+a {
     color: rgba(255, 255, 255, 1);
-  text-decoration: none;
-  transition: 0.3s;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-nav a:hover{
+nav a:hover {
     text-decoration-line: underline;
     color: rgb(179, 116, 87);
 }
 
-.icons_list{
+.icons_list {
     grid-column: 3/4;
     position: relative;
     display: grid;
@@ -73,7 +79,7 @@ nav a:hover{
     margin-left: 20px;
 }
 
-.icon{
+.icon {
     background-image: url(../img/img_1screen/nav/icons.png);
     width: 2.5rem;
     height: 77px;
@@ -90,56 +96,59 @@ nav a:hover{
     justify-content: center;
 }
 
-.heart{
+.heart {
     background-position: -5px 7px;
 }
 
-.user{
+.user {
     background-position: -75px 7px;
 }
 
 
-.shopping-cart{
+.shopping-cart {
     background-position: -145px 7px;
 }
 
-.heart:hover, .user:hover, .shopping-cart:hover{
-    transform: translate(0,-10%);
-    -webkit-transform: translate(0,-10%); 
-    -o-transform: translate(0,-10%); 
-    -moz-transform: translate(0,-10%);
+.heart:hover,
+.user:hover,
+.shopping-cart:hover {
+    transform: translate(0, -10%);
+    -webkit-transform: translate(0, -10%);
+    -o-transform: translate(0, -10%);
+    -moz-transform: translate(0, -10%);
 }
 
-.nav_mobail{
+.nav_mobail {
     position: absolute;
     top: 27px;
     right: 0;
     display: none;
 }
+*/
 
 /*MAIN*/
 
-main{
+main {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
 }
 
-.wrapper{
+.wrapper {
     grid-column: 2/3;
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
 
-h1{
+h1 {
     grid-column: 1/4;
     margin: 70px 0;
 }
 
-.tab{
+.tab {
     grid-column: 1/2;
 }
 
-button{
+button {
     text-decoration: none;
     display: inline-grid;
     grid-auto-flow: column;
@@ -157,15 +166,15 @@ button{
     cursor: pointer;
 }
 
-.tab_btn{
+.tab_btn {
     margin-right: 70px;
 }
 
-.tab_btn.active{
+.tab_btn.active {
     background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
 }
 
-.tab .btn_out{
+.tab .btn_out {
     background: #FFFFFF;
     border: none;
     font-weight: 700;
@@ -174,16 +183,16 @@ button{
     width: auto;
 }
 
-.content{
+.content {
     grid-column: 2/4;
     display: none;
 }
 
-.content.active{
+.content.active {
     display: block;
 }
 
-.avatar{
+.avatar {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -194,7 +203,26 @@ button{
     background-size: 40%;
 }
 
-.person{
+/*ипут фото*/
+#avatar-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+}
+
+#avatar-file+label {
+    cursor: pointer;
+    font-size: small;
+}
+
+#avatar-file+label span {
+    color: #8d8c8c;
+}
+
+.person {
     display: grid;
     grid-auto-flow: column;
     margin-bottom: 22px;
@@ -202,11 +230,11 @@ button{
     gap: 20px;
 }
 
-.information{
+.information {
     max-width: 528px;
 }
 
-input{
+input {
     width: 241px;
     height: 36px;
     padding: 0;
@@ -215,14 +243,15 @@ input{
     display: inline-block;
     outline: none;
 }
+
 /*пароль*/
-#user_password{
+#user_password {
     border: none;
     width: 203px;
     margin: 0px 12px 0px 0px;
 }
 
-.password_div{
+.password_div {
     height: 36px;
     border: 1px solid rgb(123, 123, 123);
     border-radius: 2px;
@@ -234,90 +263,169 @@ input{
     align-items: center;
 }
 
-.password_svg{
+.password_svg {
     cursor: pointer;
     opacity: 0.5;
 }
 
-.look_click{
+.look_click {
     opacity: 0.9;
 }
 
 /*пароль*/
 
-.carddate_cvv{
-    display: inline-block;
+/*ПЛАТЕЖНАЯ СИСТЕМА*/
+
+.card_number_wrapper {
+    display: inline-grid;
+    position: relative;
+    width: 250px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-right: 12px;
 }
 
-.input_datetime, .input_cvv{
-    width: 108px;
+.card_number_wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+    width: 20px;
+    height: 20px;
+    background: url(../img/person_icon/credit-card.png);
+    background-size: cover;
+    margin-right: 10px;
 }
 
-.save{
+.card_date,
+.card_cvv {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 2px;
+    margin: 0px 12px 20px 0px;
+}
+
+.card_date_cvv {
+    display: inline-grid;
+    grid-auto-flow: column;
+    width: 250px;
+    margin-right: 12px;
+}
+
+.lable_carddate, .lable_cardcvv{
+    color: #A1A1A1;
+    padding-left: 10px;
+}
+
+.input_datetime,
+.input_cvv {
+    width: 70px;
+    margin: 0;
+    height: 36px;
+    outline: none;
+    border: none;
+    text-align: center;
+}
+
+.save {
     justify-content: center;
     padding: 0;
+    grid-column: 2/3;
+    background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
 }
 
-.change_password, .save{
+.change_password,
+.save {
     margin-right: 12px;
 }
 
 /*ЗАКАЗЫ*/
 
-.content_orders{
+.content_orders {
     min-width: 100%;
     margin-left: -45px;
     min-height: 100%;
 }
 
-.order_inform, .name_columns{
+.order_inform,
+.name_columns {
     display: grid;
     grid-template-columns: 4fr repeat(4, 1fr) 0.5fr;
     column-gap: 20px;
     align-items: center;
 }
 
-.name_columns{
-color: #A1A1A1;
+.name_columns {
+    color: #A1A1A1;
 }
 
-.photo_name{
+.photo_name {
     display: grid;
     grid-auto-flow: column;
     column-gap: 30px;
 }
 
-.photo_name img{
+.photo_name img {
     width: 70px;
     align-self: center;
 }
 
-.content_orders svg{
+.discount{
+    position: relative;
+    font-size: 14px;
+    color: #A1A1A1;
+    margin: 0;
+    margin-bottom: -16px;
+}
+
+.discount:before {
+    border-bottom: 1px solid #A1A1A1;
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 50%;
+    transform: rotate(20deg);
+}
+
+.fool_price{
+    color: red;
+}
+
+
+    
+.content_orders svg {
     justify-self: right;
     align-self: flex-start;
 }
 
-hr{
+hr {
     opacity: 0.2;
 }
 
-.sent{
+.sent {
     color: #029281;
     ;
 }
-.received{
+
+.received {
     color: #025E92;
 }
-.expected{
+
+.expected {
     color: #7E9202;
 }
-.rejected{
+
+.rejected {
     color: #920202;
 }
 
 /*СПИСОК ЖЕЛАЕМОГО*/
 
-.content_like{
+.content_like {
     min-width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -325,23 +433,23 @@ hr{
     margin-left: -50px;
 }
 
-article a{
+article a {
     display: block;
     height: 100%;
 }
 
-article{
+article {
     margin: 0;
     padding: 0;
     list-style: none;
     position: relative;
 }
 
-article img{
+article img {
     max-width: 100%;
 }
 
-.like{
+.like {
     position: absolute;
     right: 0;
     top: 0;
@@ -349,7 +457,7 @@ article img{
     height: 5vw;
 }
 
-.cart_p{
+.cart_p {
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -358,12 +466,12 @@ article img{
     color: #000000;
 }
 
-.cart_p_prise{
+.cart_p_prise {
     font-weight: 600;
     font-size: 1.4vw;
 }
 
-.page_number{
+.page_number {
     grid-column: 1/-1;
     display: grid;
     grid-auto-flow: column;
@@ -372,7 +480,7 @@ article img{
 
 }
 
-.page_number div{
+.page_number div {
     width: 20px;
     height: 25px;
     border: 2px solid #A1A1A1;
@@ -382,16 +490,16 @@ article img{
     cursor: pointer;
 }
 
-.page_number div.active{
+.page_number div.active {
     background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
     border: none;
     width: 24px;
     height: 29px;
 }
 
-/*ФУТЕР*/
+/*ФУТЕР*
 
-footer{
+footer {
     background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
     background-repeat: no-repeat;
     min-height: 100%;
@@ -404,7 +512,7 @@ footer{
     grid-template-columns: 1fr 6fr 1fr;
 }
 
-.footer_wrapper{
+.footer_wrapper {
     grid-column: 2/3;
     width: 100%;
     display: grid;
@@ -414,16 +522,16 @@ footer{
     align-items: center;
 }
 
-.footer_logo{
+.footer_logo {
     font-size: small;
     min-width: 201px;
 }
 
-.footer_logo img{
+.footer_logo img {
     max-width: 150px;
 }
 
-.footer_group{
+.footer_group {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
@@ -431,55 +539,55 @@ footer{
     justify-self: right;
 }
 
-footer h3{
+footer h3 {
     font-size: 16px;
     font-weight: 800;
     color: #FFFFFF;
 }
 
-footer ul{
+footer ul {
     list-style: none;
     padding: 0;
     font-size: 12px;
     line-height: 220.4%;
 }
 
-footer a:hover{
+footer a:hover {
     cursor: pointer;
     text-decoration-line: underline;
 }
 
-.footer_contacts li{
+.footer_contacts li {
     margin-bottom: 10px;
 }
 
-.socials{
+.socials {
     position: relative;
     width: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.social{
+.social {
     max-width: 22px;
     min-height: 20px;
     background-image: url(../img/footer/Group\ 82.svg);
     background-repeat: no-repeat;
 }
 
-.twitter{
+.twitter {
     background-position: 1px 0px;
 }
 
-.facebook{
+.facebook {
     background-position: -34px 0px;
 }
 
-.instagram{
+.instagram {
     background-position: -64px 0px;
 }
 
-.up{
+.up {
     background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
     transform: rotate(90deg);
     width: 100px;
@@ -495,6 +603,7 @@ footer a:hover{
     margin-bottom: 12px;
 }
 
-.up:hover{
+.up:hover {
     text-decoration: none;
 }
+*/

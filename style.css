@@ -49,6 +49,10 @@ header{
     z-index: -1;
 }
 
+.circles{
+    opacity: 0.2;
+}
+
 .btn_prew,.btn_next{
     grid-row: 1/-1;
 } 
@@ -213,6 +217,7 @@ button:hover{
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+    z-index: 1;
 }
 
 .dot{
@@ -238,7 +243,6 @@ button:hover{
     bottom: 0;
     right: 0;
     text-align: end;
-    z-index: 2;
     font-size: 8vw;
     margin: 0;
     padding: 0;
@@ -382,14 +386,18 @@ section article img{
     max-width: 100%;
 }
 
+/*ДОБАВИТЬ В ИЗБРАННОЕ*/
 
-
-.like{
+.like, .like_color{
     position: absolute;
     right: 0;
     top: 0;
     width: 4vw;
     height: 5vw;
+}
+
+.display_none{
+    display: none;
 }
 
 .dots_main{
@@ -703,6 +711,7 @@ footer a:hover{
 .up:hover{
     text-decoration: none;
 }
+
 
 
 
