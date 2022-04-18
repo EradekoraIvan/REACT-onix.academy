@@ -10,6 +10,7 @@ html, body{
 
 h4{
     font-weight: lighter;
+    margin: 0;
 }
 
 /*ОПИСАНИЕ*/
@@ -466,6 +467,7 @@ section article img{
 .cart_p_prise{
     font-weight: 600;
     font-size: 2vw;
+    margin: 0;
 }
 
 main button{
@@ -584,7 +586,6 @@ section .circle{
 
 .fool_price{
     color: #9B0000;
-    margin: 0;
 }
 
 /*SALE*/
