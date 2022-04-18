@@ -26,7 +26,7 @@ h5,
 h6 {
     font-family: "El+Messiri";
 }
-/*
+
 header {
     background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
     display: grid;
@@ -124,7 +124,7 @@ nav a:hover {
     right: 0;
     display: none;
 }
-*/
+
 
 /*MAIN*/
 
@@ -374,6 +374,7 @@ input {
     align-self: center;
 }
 
+/*СКИДКА*/
 .discount{
     position: relative;
     font-size: 14px;
@@ -395,7 +396,7 @@ input {
     color: red;
 }
 
-
+/*СКИДКА*/
     
 .content_orders svg {
     justify-self: right;
@@ -497,7 +498,7 @@ article img {
     height: 29px;
 }
 
-/*ФУТЕР*
+/*ФУТЕР*/
 
 footer {
     background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
@@ -606,4 +607,3 @@ footer a:hover {
 .up:hover {
     text-decoration: none;
 }
-*/

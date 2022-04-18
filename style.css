@@ -1,33 +1,50 @@
-/*ПЕРВЫЙ ЭКРАН*/
-
-@font-face {
-    font-family: 'fontb7ae0d38a8eb699e0938a474bf8e0aa5';
-        
-        src:    url('https://nomail.com.ua/files/eot/b7ae0d38a8eb699e0938a474bf8e0aa5.eot?#iefix') format('embedded-opentype'),
-                url('https://nomail.com.ua/files/woff/b7ae0d38a8eb699e0938a474bf8e0aa5.woff') format('woff'),
-                url('https://nomail.com.ua/files/woff2/b7ae0d38a8eb699e0938a474bf8e0aa5.woff2') format('woff2');
-    }
-
-@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-
-@import url(https://fonts.googleapis.com/css?family=El+Messiri:regular);
-
 html, body{
     max-width: 100%;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Rubik";
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: "El+Messiri";
-}
+/*h1, h2, h3, h4, h5, h6{
+    font-family: ;
+}*/
 
 h4{
     font-weight: lighter;
 }
 
+/*ОПИСАНИЕ*/
 
+.description{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+.description section{
+    grid-column: 2/3;
+}
+
+.description h1{
+    font-size: 5vw;
+    text-align: center;
+    margin: 0px;
+}
+.description a{
+    color: rgb(67, 67, 249);
+    text-decoration: underline;
+}
+
+.a-img{
+    width: 34px;
+    height: 30px;
+    background-image: url(img/img_1screen/nav/icons.png);
+    background-repeat: no-repeat;
+    background-position: -7px -41px;
+    display: inline-block;
+}
+
+
+
+/*ПЕРВЫЙ ЭКРАН*/
 header{
     background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
     position: relative;
@@ -388,17 +405,26 @@ section article img{
 
 /*ДОБАВИТЬ В ИЗБРАННОЕ*/
 
-.like, .like_color{
+
+
+.like{
     position: absolute;
     right: 0;
     top: 0;
     width: 4vw;
     height: 5vw;
+    cursor: pointer;
+
+    background: url(img/person_icon/like.svg);
+    background-size: cover;
 }
 
-.display_none{
-    display: none;
+.like_active{
+    background: url(img/person_icon/like_color.svg);
+    background-size: cover;
 }
+
+/*ДОБАВИТЬ В ИЗБРАННОЕ*/
 
 .dots_main{
     grid-row: 3/4;
@@ -539,6 +565,46 @@ section .circle{
     background: #f1f1f1;
 }
 
+.discount{
+    position: relative;
+    font-size: 16px;
+    color: #A1A1A1;
+    margin: 0;
+    text-align: end;
+}
+
+.discount:before {
+    border-bottom: 1px solid #A1A1A1;
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 50%;
+    transform: rotate(20deg);
+}
+
+.fool_price{
+    color: #9B0000;
+    margin: 0;
+}
+
+/*SALE*/
+.sale::after{
+    content: 'sale';
+    font-size: 1.4vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px 0px 0px 0px;
+    color: #FFFFFF;
+    background: #9B0000;
+    width: 5vw;
+    height: 2vw;
+    position: absolute;
+    top: 20px;
+}
+
+/*СКИДКИ*/
+
 /*ЧТО ДУМАЮТ О НАС*/
 .opinion{
     font-size: 14px;
@@ -610,7 +676,7 @@ details summary::after{
 
 /*футер*/
 
-footer{
+/*footer{
     background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
     background-repeat: no-repeat;
     min-height: 100%;
@@ -710,7 +776,116 @@ footer a:hover{
 
 .up:hover{
     text-decoration: none;
+}*/
+
+footer {
+    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    background-repeat: no-repeat;
+    min-height: 100%;
+    color: #dfdede;
+    
+    
+    font-family: 'fontb7ae0d38a8eb699e0938a474bf8e0aa5';
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
 }
+
+.footer_wrapper {
+    grid-column: 2/3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+    justify-content: left;
+    align-items: center;
+}
+
+.footer_logo {
+    font-size: small;
+    min-width: 201px;
+}
+
+.footer_logo img {
+    max-width: 150px;
+}
+
+.footer_group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    max-width: 460px;
+    justify-self: right;
+}
+
+footer h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+    line-height: 220.4%;
+}
+
+footer a:hover {
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+
+.footer_contacts li {
+    margin-bottom: 10px;
+}
+
+.socials {
+    position: relative;
+    width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.social {
+    max-width: 22px;
+    min-height: 20px;
+    background-image: url(img/footer/Group\ 82.svg);
+    background-repeat: no-repeat;
+}
+
+.twitter {
+    background-position: 1px 0px;
+}
+
+.facebook {
+    background-position: -34px 0px;
+}
+
+.instagram {
+    background-position: -64px 0px;
+}
+
+.up {
+    background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);
+    transform: rotate(90deg);
+    width: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3/4;
+    align-self: flex-end;
+    justify-self: left;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 12px;
+}
+
+.up:hover {
+    text-decoration: none;
+}
+
 
 
 
