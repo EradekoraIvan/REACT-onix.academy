@@ -1,0 +1,30 @@
+/*ОПИСАНИЕ*/
+
+
+.description{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+  
+  .description section{
+    grid-column: 2/3;
+  }
+  
+  .description h2{
+    font-size: 4vw;
+    text-align: center;
+    margin: 0px;
+  }
+  .description a{
+    color: rgb(67, 67, 249);
+    text-decoration: underline;
+  }
+  
+  .a-img{
+    width: 34px;
+    height: 30px;
+    background-image: url(../../../img/icons/icons.png);
+    background-repeat: no-repeat;
+    background-position: -77px -40px;
+    display: inline-block;
+  }

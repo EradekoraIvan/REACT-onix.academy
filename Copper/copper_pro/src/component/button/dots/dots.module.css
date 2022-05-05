@@ -1,0 +1,28 @@
+main .dots{
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+.dot{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    background: #FFFFFF;
+}
+
+main .dots .dot{
+    background: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main .dots .active, .active{
+    background: linear-gradient(65.81deg, #5E3928 -24.09%, #E4A16F 104.02%);
+}
+
+.dot:hover{
+    cursor: url(../../../img/icons/Cursor.png) 4 12, auto;
+}

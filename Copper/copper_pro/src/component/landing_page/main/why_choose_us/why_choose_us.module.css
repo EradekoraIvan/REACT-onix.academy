@@ -1,0 +1,18 @@
+h3{
+    font-size: 18px;
+}
+
+.ul{
+    grid-column: 2/3;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+li img{
+    max-width: 60px;
+}

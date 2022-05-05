@@ -1,0 +1,41 @@
+.stock{
+    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    color: #FFFFFF;
+    height: 350px;
+    align-items: center;
+}
+
+.container{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    row-gap: 20px;
+    align-items: center;
+    position: relative;
+    overflow:hidden;
+    z-index: 1;
+}
+
+.stock .text{
+    grid-column: 2/3;
+    justify-self: start;
+    align-self: center;
+}
+
+.stock h2{
+    margin: 0;
+    font-size: 100px;
+    text-align: left;
+}
+p{
+    font-size: 30px;
+}
+
+.stock_img{
+    height: 90%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    bottom: 0;
+    left: 50vw;
+}

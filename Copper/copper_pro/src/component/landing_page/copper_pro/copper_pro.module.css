@@ -1,0 +1,12 @@
+.copper_pro{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: end;
+    font-size: 8vw;
+    margin: 0;
+    padding: 0;
+    font-family: "El+Messiri";
+    font-weight: 100;
+    line-height: 0.75;
+}

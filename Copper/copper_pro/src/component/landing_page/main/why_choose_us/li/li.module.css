@@ -1,0 +1,30 @@
+
+summary{
+    background: linear-gradient(65.81deg, #5E3928 -24.09%, #E4A16F 104.02%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 10px;
+}
+details summary::-webkit-details-marker {
+    display: none;
+}
+details > summary {
+    list-style: none;
+}
+
+details summary::after{
+    content: url(../../../../../img/icons/down-chevron.png);
+    margin-left: 5px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  details[open] summary::after{
+    content: url(../../../../../img/icons/left-chevron.png);
+}
+
+
+

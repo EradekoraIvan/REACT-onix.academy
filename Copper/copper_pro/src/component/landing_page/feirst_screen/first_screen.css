@@ -1,0 +1,12 @@
+.first_screen_wrapper{
+background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+position: relative;
+padding-top: 0;
+display: grid;
+grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
+grid-template-rows: 1fr 6.7fr;
+align-items: center;
+grid-column-gap: 10px;
+color: #FFFFFF;
+z-index: 1;
+}

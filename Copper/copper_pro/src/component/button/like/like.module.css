@@ -1,0 +1,16 @@
+.like{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4vw;
+    height: 5vw;
+    cursor: pointer;
+
+    background: url(../../../img/svg/like.svg);
+    background-size: cover;
+}
+
+.like_active{
+    background: url(../../../img/svg/likehover.svg);
+    background-size: cover;
+}

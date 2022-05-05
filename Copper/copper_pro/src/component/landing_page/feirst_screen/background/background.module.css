@@ -1,0 +1,7 @@
+.bgfs{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+  }
