@@ -4,6 +4,23 @@ import logo from '../../img/svg/logo.svg';
 
 
 class Header extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            counter_like: 0,
+            counter_shopping_cart: 1,
+            style: 'none'
+        };
+        this.increment=this.increment.bind(this);
+    }
+
+    increment(){
+        this.setState(state => ({
+            style: 'block',
+            counter_like: state.counter_like + 1
+        }));
+    }
+
     render() {
         return (
             <header>
@@ -17,9 +34,9 @@ class Header extends React.Component {
                         <a href="#">Контакты</a>
                     </nav>
                     <div className="icons_list">
-                        <a className="icon heart" id="heart" href="#"></a>
+                        <a onClick={this.increment} className="icon heart" id="heart" href="#"> <p className={this.state.style}>{this.state.counter_like}</p> </a>
                         <a className="icon user" href="#"></a>
-                        <a className="icon shopping-cart" id="shopping-cart" href="#">1</a>
+                        <a className="icon shopping-cart" id="shopping-cart" href="#"> {this.state.counter_shopping_cart} </a>
                     </div>
 
                     <a href="../nav_mobail.html" className="nav_mobail">

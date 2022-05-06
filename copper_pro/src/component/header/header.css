@@ -1,3 +1,11 @@
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+
 header{
   grid-column: 1/-1;
   /*background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);*/
@@ -72,6 +80,7 @@ nav a:hover {
 
 .heart {
     background-position: -5px 10px;
+    color: rgb(61, 115, 91);
 }
 
 .user {

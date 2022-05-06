@@ -1,0 +1,5 @@
+${style.like_active}
+
+style: `${style.like} ${style.like_active}`
+
+`${style.like}`
