@@ -8,7 +8,7 @@ class Footer extends React.Component {
             <footer className="container">
                 <div className={style.footer_wrapper}>
                     <div className={style.footer_logo}>
-                        <img className={style.footer_img} src={logo} alt="logo" />
+                        <img className={style.img} src={logo} alt="logo" />
                         <p>© 2021 “Copper Pro” <br />
                             Все права защищенны</p>
                         <a href="#">Политика конфиденциальности</a>
