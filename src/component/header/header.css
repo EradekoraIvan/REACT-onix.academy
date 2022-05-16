@@ -6,7 +6,7 @@
     display: block;
 }
 
-header{
+.header_style_fs{
   grid-column: 1/-1;
   /*background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);*/
   display: grid;
@@ -14,6 +14,15 @@ header{
   /*height: 135px;*/
   align-content: center;
   }
+
+  .header_style{
+    grid-column: 1/-1;
+    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    height: 135px;
+    align-content: flex-start;
+    }
 
   .header_wrapper {
     grid-column: 2/3;
@@ -88,13 +97,13 @@ nav a:hover {
 }
 
 
-.shopping-cart {
+.shopping_cart {
     background-position: -145px 10px;
 }
 
 .heart:hover,
 .user:hover,
-.shopping-cart:hover {
+.shopping_cart:hover {
     transform: translate(0, -10%);
     -webkit-transform: translate(0, -10%);
     -o-transform: translate(0, -10%);

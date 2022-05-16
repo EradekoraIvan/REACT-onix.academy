@@ -1,5 +1,4 @@
 import React from "react";
-import style from './li.module.css';
 
 class Li extends React.Component {
     constructor(props) {

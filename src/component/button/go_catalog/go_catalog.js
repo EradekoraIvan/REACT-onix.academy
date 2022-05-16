@@ -1,10 +1,11 @@
 import React from "react";
 import style from './go_catalog.module.css';
+import {Link} from 'react-router-dom';
 
 class GoCatalog extends React.Component{
     render(){
         return(
-            <a class={style.go_catalog} href="#">Перейти в каталог</a>
+            <Link className={style.go_catalog} to="/">Перейти в каталог</Link>
         )
     }
 }

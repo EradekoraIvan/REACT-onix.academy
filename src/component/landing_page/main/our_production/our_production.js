@@ -6,6 +6,7 @@ import tableware from '../../../../img/product/our_production/tableware.png';
 import accessories from '../../../../img/product/our_production/accessories.png';
 import individual from '../../../../img/product/our_production/individual.png';
 import vouchers from '../../../../img/product/our_production/vouchers.png';
+import { Link } from "react-router-dom";
 
 
 
@@ -18,45 +19,45 @@ class OurProduction extends React.Component {
                 <h2>наша продукция</h2>
 
                 <article className="kart copper">
-                    <a href="#">
+                    <Link to="/">
                         <img src={essential_oil} alt="" />
                         <h3>Для эфирных масел</h3>
-                    </a>
+                    </Link>
                 </article>
 
                 <article className="kart gray">
-                    <a href="#">
+                    <Link to="/">
                         <img src={hydrolate} alt="" />
                         <h3>Для гидролатов</h3>
-                    </a>
+                    </Link>
                 </article>
 
                 <article className="kart gray">
-                    <a href="#">
+                    <Link to="/">
                         <img src={tableware} alt="" />
                         <h3>Медная посуда</h3>
-                    </a>
+                    </Link>
                 </article>
 
                 <article className="kart gray">
-                    <a href="#">
+                    <Link to="/">
                         <img src={accessories} alt="" />
                         <h3>Аксессуары из меди</h3>
-                    </a>
+                    </Link>
                 </article>
 
                 <article className="kart">
-                    <a href="#">
+                    <Link to="/">
                         <img src={individual} alt="" />
                         <h3>Индивидуальный <br /> заказ</h3>
-                    </a>
+                    </Link>
                 </article>
 
                 <article className="kart">
-                    <a href="#">
+                    <Link to="/">
                         <img src={vouchers} alt="" />
                         <h3>Скидки и <br /> предложения</h3>
-                    </a>
+                    </Link>
                 </article>
             </section>
 

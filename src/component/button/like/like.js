@@ -19,12 +19,12 @@ likeClick() {
     render(){
         if (this.state.style){
         return(
-            <span onClick={this.likeClick} class={style.like}></span>
+            <span onClick={this.likeClick} className={style.like}></span>
         );
         }
         else {
             return(
-                <span onClick={this.likeClick} class={`${style.like} ${style.like_active}`}></span>
+                <span onClick={this.likeClick} className={`${style.like} ${style.like_active}`}></span>
             );
         }
     }

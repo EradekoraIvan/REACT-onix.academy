@@ -8,12 +8,21 @@ import Text from "./text/text.js";
 import SliderImg from "./slider_img/slider_img";
 import CopperPro from "../copper_pro/copper_pro";
 
+
+
 class FirstScreen extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={
+
+        }
+
+    }
     render() {
         return (
             <div className="first_screen_wrapper">
                 <Background bg={bg} />
-                <Headrer />
+                <Headrer style= {'header_style_fs'} />
                 <Arrow />
                 <Text/>
                 <SliderImg/>
