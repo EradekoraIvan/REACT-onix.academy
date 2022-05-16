@@ -16,7 +16,7 @@ class Profile extends React.Component {
     render() {
         return (
             <>
-                <Header style={'header_style'} />
+                <Header header_style={'header_style'} />
                 <div style={{display:'grid', gridTemplateColumns: '1fr 6fr 1fr'}}>
                     <Biography />
                 </div>

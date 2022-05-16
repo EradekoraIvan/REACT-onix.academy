@@ -24,7 +24,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <header className={this.props.style}>
+            <header className={this.props.heder_style}>
                 <div className="header_wrapper">
                     <Link to="/" className="logo"><img src={logo} alt="Copper Pro" /></Link>
                     <nav>

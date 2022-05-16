@@ -22,7 +22,7 @@ class FirstScreen extends React.Component {
         return (
             <div className="first_screen_wrapper">
                 <Background bg={bg} />
-                <Headrer style= {'header_style_fs'} />
+                <Headrer header_style= {'header_style_fs'} />
                 <Arrow />
                 <Text/>
                 <SliderImg/>
