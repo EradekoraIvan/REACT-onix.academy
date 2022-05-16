@@ -10,25 +10,25 @@ import Dots from "../../../button/dots/dots_fs";
 
 
 const products =
-    [{ "image": `${essential_oil}` },
-    { "image": `${hydrolate}` },
-    { "image": `${tableware}` },
+    [{ "image": `${essential_oil}`, id:1 },
+    { "image": `${hydrolate}`, id:2 },
+    { "image": `${tableware}`, id:3 },
     ];
 
 class BestSelling extends React.Component {
     render() {
         return (
-            <section class="grey_container container">
+            <section className="grey_container container">
                 <h2>лучшие продажи</h2>
                 <MainArrow />
-                <div class="slider_w">
-                    {products.map(item => <ArticleProduct image={item.image} />)}
+                <div className="slider_w">
+                    {products.map(item => <ArticleProduct key={item.id} image={item.image} />)}
                 </div>
                 <Dots />
                 <GoCatalog />
 
 
-                <img src="img/img_1screen/circles.png" alt="" class="bgfs circles" />
+                <img src="img/img_1screen/circles.png" alt="" className="bgfs circles" />
             </section>
         )
     }

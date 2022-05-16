@@ -14,7 +14,7 @@ class ArticleProduct extends React.Component {
         return (
             <article className={style.sale}>
                 <Like />
-                <a href="">
+                
                     <img src={this.props.image} alt="" />
                     <div className={style.cart_p}>
                         <h4><span>Медный чайник с<br /> фарфоровой ручкой</span></h4>
@@ -23,7 +23,7 @@ class ArticleProduct extends React.Component {
                             <p className={`${style.cart_p_prise} ${style.fool_price}`}><span>1953 грн</span></p>
                         </div>
                     </div>
-                </a>
+                
             </article>
         )
     }

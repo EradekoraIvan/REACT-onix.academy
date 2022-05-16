@@ -1,0 +1,16 @@
+.wrapper{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    margin-top: 50px;
+}
+
+.biography_btn{
+    align-self: end;
+    justify-self: right;
+    margin-top: 20px;
+    width: auto;
+    background: slategray;
+}
+

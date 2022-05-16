@@ -1,0 +1,8 @@
+.biography_btn{
+    align-self: end;
+    justify-self: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: auto;
+    background: slategray;
+}

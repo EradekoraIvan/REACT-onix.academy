@@ -1,6 +1,7 @@
 import React from "react";
 import './header.css';
 import logo from '../../img/svg/logo.svg';
+import { Link } from "react-router-dom";
 
 
 class Header extends React.Component {
@@ -9,39 +10,39 @@ class Header extends React.Component {
         this.state = {
             counter_like: 0,
             counter_shopping_cart: 1,
-            style: 'none'
+            style_heart: 'none',
         };
         this.increment=this.increment.bind(this);
     }
 
     increment(){
         this.setState(state => ({
-            style: 'block',
+            style_heart: 'block',
             counter_like: state.counter_like + 1
         }));
     }
 
     render() {
         return (
-            <header>
+            <header className={this.props.style}>
                 <div className="header_wrapper">
-                    <a href="../index.html" className="logo"><img src={logo} alt="Copper Pro" /></a>
+                    <Link to="/" className="logo"><img src={logo} alt="Copper Pro" /></Link>
                     <nav>
-                        <a href="#">Каталог</a>
-                        <a href="#">Новости</a>
-                        <a href="#">Доставка</a>
-                        <a href="#">О нас</a>
-                        <a href="#">Контакты</a>
+                        <Link to="/">Каталог</Link>
+                        <Link to="/">Новости</Link>
+                        <Link to="/">Доставка</Link>
+                        <Link to="#">О нас</Link>
+                        <Link to="#">Контакты</Link>
                     </nav>
                     <div className="icons_list">
-                        <a onClick={this.increment} className="icon heart" id="heart" href="#"> <p className={this.state.style}>{this.state.counter_like}</p> </a>
-                        <a className="icon user" href="#"></a>
-                        <a className="icon shopping-cart" id="shopping-cart" href="#"> {this.state.counter_shopping_cart} </a>
+                        <Link onClick={this.increment} className="icon heart" id="heart" to="/"> <p className={this.state.style_heart}>{this.state.counter_like}</p> </Link>
+                        <Link className="icon user" to="profile/profile.js" > </Link>
+                        <Link className="icon shopping_cart" id="shopping-cart" to="/"> {this.state.counter_shopping_cart} </Link>
                     </div>
 
-                    <a href="../nav_mobail.html" className="nav_mobail">
+                    <Link to="/" className="nav_mobail">
                         <img src="../img/img_1screen/mb.png" alt="Меню" className="nav_mobail_img" />
-                    </a>
+                    </Link>
                 </div>
             </header>
         )

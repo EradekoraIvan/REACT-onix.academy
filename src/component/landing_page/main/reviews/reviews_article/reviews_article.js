@@ -20,7 +20,7 @@ class ReviewsArticle extends React.Component {
                     лет
                     происходят поломки, мы всегда находим с клиентом наиболее удобный вариант решения вопроса.
                 </p>
-                <span class={style.opinion_date}>20.10.21</span>
+                <span className={style.opinion_date}>20.10.21</span>
             </article>
         )
     }
