@@ -74,7 +74,7 @@ class Biography extends React.Component {
                     year_of_birth={item.years_of_life.year_of_birth}
                     year_of_death={item.years_of_life.year_of_death}
                     key_dates={item.key_dates}
-                    event={item.key_dates.event}
+                    event={item.event}
                     details={item.biography}
                     remov={() => this.removPerson(pos)}
                     pos={pos}

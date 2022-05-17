@@ -1,5 +1,6 @@
 import React from "react";
 import style from './addPersonForm.module.css';
+import update from 'immutability-helper';
 
 class AddPersonForm extends React.Component {
 
@@ -10,6 +11,8 @@ class AddPersonForm extends React.Component {
         keyDatesArrey: [],
         year_of_birth: '',
         year_of_death: '',
+        input_key_date: '',
+        input_value: '',
     }
 
     handleYearBirth = e => {
@@ -38,26 +41,32 @@ class AddPersonForm extends React.Component {
 
 
     hendleKeyDate = (e, pos) => {
-        const keyDatesArrey = [...this.state.keyDatesArrey];
-        keyDatesArrey.key_date = e.target.value;
+        const temp = [...this.state.keyDatesArrey];
+        const newTemp = update(temp, {
+           [pos] : {key_date:{$set:e.target.value}}
+        })
 
         this.setState({
-            keyDatesArrey: keyDatesArrey
+            input_key_date: e.target.value,
+            keyDatesArrey: newTemp,
+            
         });
-        console.log(this.state.keyDatesArrey)
     }
 
 
 
 
     hendleEvent = (e, pos) => {
-        const Event = [...this.state.keyDatesArrey];
-        Event.event = e.target.value;
+        const temp = [...this.state.keyDatesArrey];
+        const newTemp = update(temp, {
+            [pos] : {event:{$set:e.target.value}}
+        })
 
         this.setState({
-            keyDatesArrey: Event
+            input_key_date: e.target.value,
+            keyDatesArrey: newTemp,
+            
         });
-        console.log(this.state.keyDatesArrey)
     }
 
     createInput = () => {
@@ -68,10 +77,11 @@ class AddPersonForm extends React.Component {
             event: '',
         }
 
-        const keyDatesArrey = [...this.state.keyDatesArrey];
+        const temp = Array.from(this.state.keyDatesArrey)
+
+        const keyDatesArrey = [...temp];
         keyDatesArrey.push(keyDate)
 
-        console.log('вижу массив')
         this.setState({
             keyDatesArrey: keyDatesArrey,
             clickCreateInput: true
@@ -90,20 +100,7 @@ class AddPersonForm extends React.Component {
                 year_of_birth: this.state.year_of_birth,
                 year_of_death: this.state.year_of_death,
             },
-
-            key_dates: [
-                {
-                    id: 1,
-                    date: '',
-                    event: ''
-                },
-
-                {
-                    id: 2,
-                    date: '',
-                    event: ''
-                },
-            ],
+            key_dates: this.state.keyDatesArrey,
 
             biography: this.state.personBiography,
         }
@@ -125,16 +122,16 @@ class AddPersonForm extends React.Component {
 
                         type="text"
                         name="key_date"
-                        value={this.state.keyDatesArrey.key_date || ''}
-                        onChange={this.hendleKeyDate}
+                        value={this.state.keyDatesArrey.input_key_date}
+                        onChange={(e) => this.hendleKeyDate(e, pos)}
                     />
                     <p>Событие</p>
                     <input
 
                         type="text"
                         name="event"
-                        value={this.state.keyDatesArrey.event || ''}
-                        onChange={this.hendleEvent}
+                        value={this.state.keyDatesArrey.input_value}
+                        onChange={(e) => this.hendleEvent(e, pos)}
                     />
                 </div>
             )
@@ -144,38 +141,41 @@ class AddPersonForm extends React.Component {
             <>
                 <form className={style.form_containrt} action="">
                     <h2>Внеси даные</h2>
+                    <label htmlFor="person_name">Полное имя</label>
                     <input
                         className={style.input}
                         type="text"
                         name="person_name"
-                        id=""
+                        id="person_name"
                         placeholder="name"
                         value={this.state.personName}
                         onChange={this.handlePersonName}
                     />
+                    <label htmlFor="year_of_birth">Год рождения</label>
                     <input
-                        type="date"
+                        type='number'
                         name="year_of_birth"
-                        id=""
+                        id="year_of_birth"
                         value={this.state.year_of_birth}
                         onChange={this.handleYearBirth}
                     />
+                    <label htmlFor="year_of_death">Год смерти</label>
                     <input
-                        type="date"
+                        type="number"
                         name="year_of_death"
-                        id=""
+                        id="year_of_death"
                         value={this.state.year_of_death}
                         onChange={this.handelYearDeath}
                     />
 
                     {this.state.clickCreateInput ? addInput : null}
 
-                    <button type="button" className={style.add_btn} onClick={this.createInput}>Добавить ключевую дату</button>
-
+                    {<button type="button" className={style.add_btn} onClick={this.createInput}>Добавить ключевую дату</button>}
+                    <label htmlFor="biography">Биография</label>
                     <textarea
                         className={style.input}
                         name="biography"
-                        id="" rows="10"
+                        id="biography" rows="10"
                         placeholder="biography"
                         value={this.state.personBiography}
                         onChange={this.handlePersonBiography}

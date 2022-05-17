@@ -18,12 +18,12 @@ class Person extends React.Component {
                         <button className={style.person_btn} onClick={this.props.remov} >Удалить</button>
                         <div className={style.key_dates}>
                             <h2 className={style.h2}>Ключевые события</h2>
-                            {this.props.key_dates.map(item => <p key={item.id}> {item.date} - {item.event} </p>)}
+                            {this.props.key_dates.map(item => <p key={item.id}> {item.key_date} - {item.event} </p>)}
                         </div>
-                        <details>
-                            <summary>Читать ,больше</summary>
-                            {this.props.details}
-                        </details>
+                        <div className={style.h2_p}>
+                            <h2 className={style.h2}>Биография</h2>
+                            <p className={style.p_biography}>{this.props.details}</p>
+                        </div>
                     </div>
                 </div>
                 <hr />
