@@ -10,7 +10,7 @@ import abraham from './image/abraham.png';
 
 let biography = [
      {
-          id:1,
+          id: 1,
           image: `${bart}`,
           person_name: 'Барт Симпсон',
           years_of_life:
@@ -22,13 +22,13 @@ let biography = [
           key_dates:[ 
                {
                     id:1,
-                    date: '01',
+                    key_date: '01',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
 
                {
                     id:2,
-                    date: '02',
+                    key_date: '02',
                     event: '4345345345 dkfmbdlkfvd.'
                },
           ],
@@ -52,13 +52,13 @@ let biography = [
           key_dates:[ 
                {
                     id:1,
-                    date: '1666',
+                    key_date: '1666',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
 
                {
                     id:2,
-                    date: '1555',
+                    key_date: '1555',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
           ],
@@ -81,13 +81,13 @@ let biography = [
           key_dates:[ 
                {
                     id:1,
-                    date: '1666',
+                    key_date: '1666',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
 
                {
                     id:2,
-                    date: '1555',
+                    key_date: '1555',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
           ],
@@ -110,13 +110,13 @@ let biography = [
           key_dates:[ 
                {
                     id:1,
-                    date: '1666',
+                    key_date: '1666',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
 
                {
                     id:2,
-                    date: '1555',
+                    key_date: '1555',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
           ],
@@ -139,13 +139,13 @@ let biography = [
           key_dates:[ 
                {
                     id:1,
-                    date: '1666',
+                    key_date: '1666',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
 
                {
                     id:2,
-                    date: '1555',
+                    key_date: '1555',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
           ],
@@ -168,13 +168,13 @@ let biography = [
           key_dates:[ 
                {
                     id:1,
-                    date: '1666',
+                    key_date: '1666',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
 
                {
                     id:2,
-                    date: '1555',
+                    key_date: '1555',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
           ],

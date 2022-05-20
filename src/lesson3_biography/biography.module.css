@@ -14,3 +14,11 @@
     background: slategray;
 }
 
+.sort_born_btn{
+    justify-self: right;
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    background: slategray;
+}
+

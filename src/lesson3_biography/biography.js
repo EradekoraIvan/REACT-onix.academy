@@ -4,6 +4,7 @@ import Person from './components/person/person.js';
 import biography from "./biography_array.js";
 import AddPerson from "./components/add_person/AddPerson";
 import AddPersonForm from "./components/add_person/addPersonForm/addPersonForm";
+import EditPersonForm from "./components/edit_person/EditPerson.js";
 
 
 class Biography extends React.Component {
@@ -11,6 +12,13 @@ class Biography extends React.Component {
     state = {
         arrey: /*JSON.parse(localStorage.getItem('personArrey')) || */ biography,
         showAddPersonForm: false,
+        showEditForm: false,
+        selectBiography: {},
+        index: '',
+    }
+
+    abcdArray = () => {
+    
     }
 
     removPerson = pos => {
@@ -34,9 +42,9 @@ class Biography extends React.Component {
 
     hideForm = () => {
         this.setState({
-            showAddPersonForm: false
+            showAddPersonForm: false,
+            showEditForm: false
         })
-        console.log('+')
     }
 
     handleEsc = (e) => {
@@ -62,6 +70,40 @@ class Biography extends React.Component {
         })
     }
 
+    edit = (pos) => {
+        this.setState({
+            showEditForm: true,
+            index: pos
+        })
+    }
+
+    hendelSelectBiography = (selectBiography) => {
+        this.setState({
+            selectBiography: selectBiography,
+        })
+    }
+    
+
+    applyСhanges = (editedObg) =>{
+        const temp = [...this.state.arrey]
+        temp.splice(this.state.index, 1, editedObg)
+        console.log(temp)
+        this.setState({
+            arrey:temp
+        })
+    }
+
+    sortOfBorn = () =>{
+        const temp = [...this.state.arrey];
+        temp.sort(function(a,b){
+            return a.years_of_life.year_of_birth - b.years_of_life.year_of_birth
+        })
+        this.setState({
+            arrey: temp
+        })
+    }
+
+
     render() {
 
         const personarray = this.state.arrey.map((item, pos) => {
@@ -78,6 +120,9 @@ class Biography extends React.Component {
                     details={item.biography}
                     remov={() => this.removPerson(pos)}
                     pos={pos}
+                    edit={() => this.edit(pos)}              
+                    hendelSelectBiography= {() => this.hendelSelectBiography(item)}
+                    
                 />
             )
         })
@@ -88,10 +133,20 @@ class Biography extends React.Component {
                 {this.state.showAddPersonForm ?
                     <AddPersonForm
                         hideForm={this.hideForm}
-                        addMe={this.hideForm} arrey={this.state.arrey}
+                        arrey={this.state.arrey}
                         addNewBiography={this.addNewBiography} />
                     : null}
+                {this.state.showEditForm ?
+                    <EditPersonForm
+                        hideForm={this.hideForm}
+                        arrey={this.state.arrey}
+                        selectBiography={this.state.selectBiography}
+                        applyСhanges={this.applyСhanges}
+                    />
+                    : null}
                 <AddPerson action='Добавить биографию' showForm={this.showForm} />
+                <button className={style.sort_born_btn} onClick={this.sortOfBorn} >Сортировать по дате <br /> рождения (sort)</button>
+                <button className={style.sort_born_btn} onClick={this.abcdArray} >Сортировать по колтичеству ключевых дат</button>
                 {personarray}
             </div>
         )

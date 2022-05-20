@@ -6,6 +6,11 @@ import style from './person.module.css';
 
 class Person extends React.Component {
     render() {
+
+        const hendleEdit = () =>{
+            this.props.hendelSelectBiography();
+            this.props.edit();
+        }
         return (
             <>
                 <div className={style.person}>
@@ -16,6 +21,7 @@ class Person extends React.Component {
                     </div>
                     <div className={style.biography}>
                         <button className={style.person_btn} onClick={this.props.remov} >Удалить</button>
+                        <button className={style.person_btn} onClick={hendleEdit} >Редактировать</button>
                         <div className={style.key_dates}>
                             <h2 className={style.h2}>Ключевые события</h2>
                             {this.props.key_dates.map(item => <p key={item.id}> {item.key_date} - {item.event} </p>)}
