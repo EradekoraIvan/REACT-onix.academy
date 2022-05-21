@@ -8,7 +8,7 @@ class AddPersonForm extends React.Component {
         personName: '',
         personBiography: '',
         clickCreateInput: false,
-        keyDatesArrey: [],
+        keyDatesArray: [],
         year_of_birth: '',
         year_of_death: '',
         input_key_date: '',
@@ -41,14 +41,14 @@ class AddPersonForm extends React.Component {
 
 
     hendleKeyDate = (e, pos) => {
-        const temp = [...this.state.keyDatesArrey];
+        const temp = [...this.state.keyDatesArray];
         const newTemp = update(temp, {
            [pos] : {key_date:{$set:e.target.value}}
         })
 
         this.setState({
             input_key_date: e.target.value,
-            keyDatesArrey: newTemp,
+            keyDatesArray: newTemp,
             
         });
     }
@@ -57,14 +57,14 @@ class AddPersonForm extends React.Component {
 
 
     hendleEvent = (e, pos) => {
-        const temp = [...this.state.keyDatesArrey];
+        const temp = [...this.state.keyDatesArray];
         const newTemp = update(temp, {
             [pos] : {event:{$set:e.target.value}}
         })
 
         this.setState({
             input_key_date: e.target.value,
-            keyDatesArrey: newTemp,
+            keyDatesArray: newTemp,
             
         });
     }
@@ -72,18 +72,18 @@ class AddPersonForm extends React.Component {
     createInput = () => {
         console.log('я пытаюсь создать инпуты')
         const keyDate = {
-            id: this.state.keyDatesArrey.length + 1,
+            id: this.state.keyDatesArray.length + 1,
             key_date: '',
             event: '',
         }
 
-        const temp = Array.from(this.state.keyDatesArrey)
+        const temp = Array.from(this.state.keyDatesArray)
 
-        const keyDatesArrey = [...temp];
-        keyDatesArrey.push(keyDate)
+        const keyDatesArray = [...temp];
+        keyDatesArray.push(keyDate)
 
         this.setState({
-            keyDatesArrey: keyDatesArrey,
+            keyDatesArray: keyDatesArray,
             clickCreateInput: true
         })
     }
@@ -92,7 +92,7 @@ class AddPersonForm extends React.Component {
 
     createBiography = () => {
         const biographiObg = {
-            id: this.props.arrey.length + 1,
+            id: this.props.array.length + 1,
             image: `${''}`,
             person_name: this.state.personName,
             years_of_life:
@@ -100,7 +100,7 @@ class AddPersonForm extends React.Component {
                 year_of_birth: this.state.year_of_birth,
                 year_of_death: this.state.year_of_death,
             },
-            key_dates: this.state.keyDatesArrey,
+            key_dates: this.state.keyDatesArray,
 
             biography: this.state.personBiography,
         }
@@ -114,7 +114,7 @@ class AddPersonForm extends React.Component {
 
     render() {
 
-        const addInput = this.state.keyDatesArrey.map((item, pos) => {
+        const addInput = this.state.keyDatesArray.map((item, pos) => {
             return (
                 <div key={item.id}>
                     <p>Дата</p>
@@ -122,7 +122,7 @@ class AddPersonForm extends React.Component {
 
                         type="text"
                         name="key_date"
-                        value={this.state.keyDatesArrey.input_key_date}
+                        value={this.state.keyDatesArray.input_key_date}
                         onChange={(e) => this.hendleKeyDate(e, pos)}
                     />
                     <p>Событие</p>
@@ -130,7 +130,7 @@ class AddPersonForm extends React.Component {
 
                         type="text"
                         name="event"
-                        value={this.state.keyDatesArrey.input_value}
+                        value={this.state.keyDatesArray.input_value}
                         onChange={(e) => this.hendleEvent(e, pos)}
                     />
                 </div>

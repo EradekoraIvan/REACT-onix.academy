@@ -10,7 +10,7 @@ class EditPersonForm extends React.Component {
         personName: this.props.selectBiography.person_name,
         personBiography: this.props.selectBiography.biography,
         editKeyDate: false,
-        keyDatesArrey: this.props.selectBiography.key_dates,
+        keyDatesArray: this.props.selectBiography.key_dates,
         year_of_birth: this.props.selectBiography.years_of_life.year_of_birth,
         year_of_death: this.props.selectBiography.years_of_life.year_of_death,
         input_key_date: '',
@@ -43,27 +43,27 @@ class EditPersonForm extends React.Component {
 
 
     hendleKeyDate = (e, pos) => {
-        const temp = [...this.state.keyDatesArrey];
+        const temp = [...this.state.keyDatesArray];
         const newTemp = update(temp, {
             [pos]: { key_date: { $set: e.target.value } }
         })
 
         this.setState({
             input_key_date: e.target.value,
-            keyDatesArrey: newTemp,
+            keyDatesArray: newTemp,
 
         });
     }
 
     hendleEvent = (e, pos) => {
-        const temp = [...this.state.keyDatesArrey];
+        const temp = [...this.state.keyDatesArray];
         const newTemp = update(temp, {
             [pos]: { event: { $set: e.target.value } }
         })
 
         this.setState({
             input_key_date: e.target.value,
-            keyDatesArrey: newTemp,
+            keyDatesArray: newTemp,
 
         });
     }
@@ -80,7 +80,7 @@ class EditPersonForm extends React.Component {
 
 
     saveСhanges = () => {
-        const temp = [...this.state.keyDatesArrey]
+        const temp = [...this.state.keyDatesArray]
         console.log(temp)
         const editedObg = {
             id: this.state.id + 50,
@@ -105,7 +105,7 @@ class EditPersonForm extends React.Component {
 
     render() {
 
-        const addInput = this.state.keyDatesArrey.map((item, pos) => {
+        const addInput = this.state.keyDatesArray.map((item, pos) => {
             return (
                 <div key={item.id}>
                     <p>Дата</p>
@@ -113,7 +113,7 @@ class EditPersonForm extends React.Component {
 
                         type="text"
                         name="key_date"
-                        value={this.state.keyDatesArrey[pos].key_date}
+                        value={this.state.keyDatesArray[pos].key_date}
                         onChange={(e) => this.hendleKeyDate(e, pos)}
                     />
                     <p>Событие</p>
@@ -121,7 +121,7 @@ class EditPersonForm extends React.Component {
 
                         type="text"
                         name="event"
-                        value={this.state.keyDatesArrey[pos].event}
+                        value={this.state.keyDatesArray[pos].event}
                         onChange={(e) => this.hendleEvent(e, pos)}
                     />
                 </div>

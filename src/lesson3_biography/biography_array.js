@@ -31,6 +31,42 @@ let biography = [
                     key_date: '02',
                     event: '4345345345 dkfmbdlkfvd.'
                },
+               
+               {
+                    id:3,
+                    key_date: '01',
+                    event: 'lkmdflkkdnflk dkfmbdlkfvd.'
+               },
+
+               {
+                    id:4,
+                    key_date: '02',
+                    event: '4345345345 dkfmbdlkfvd.'
+               },
+               
+               {
+                    id:5,
+                    key_date: '01',
+                    event: 'lkmdflkkdnflk dkfmbdlkfvd.'
+               },
+
+               {
+                    id:6,
+                    key_date: '02',
+                    event: '4345345345 dkfmbdlkfvd.'
+               },
+               
+               {
+                    id:7,
+                    key_date: '01',
+                    event: 'lkmdflkkdnflk dkfmbdlkfvd.'
+               },
+
+               {
+                    id:8,
+                    key_date: '02',
+                    event: '4345345345 dkfmbdlkfvd.'
+               },
           ],
               
           
@@ -74,7 +110,7 @@ let biography = [
           person_name: 'Лиза Симпсон',
           years_of_life:
           {
-               year_of_birth: '1178',
+               year_of_birth: '11',
                year_of_death: '1256'
           },
 
@@ -87,6 +123,11 @@ let biography = [
 
                {
                     id:2,
+                    key_date: '1555',
+                    event: 'lkmdflkkdnflk dkfmbdlkfvd.'
+               },
+               {
+                    id:3,
                     key_date: '1555',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
@@ -103,7 +144,7 @@ let biography = [
           person_name: 'Абрахам Симпсон',
           years_of_life:
           {
-               year_of_birth: '1178',
+               year_of_birth: '15',
                year_of_death: '1256'
           },
 
@@ -116,6 +157,24 @@ let biography = [
 
                {
                     id:2,
+                    key_date: '1555',
+                    event: 'lkmdflkkdnflk dkfmbdlkfvd.'
+               },
+
+               {
+                    id:3,
+                    key_date: '1666',
+                    event: 'lkmdflkkdnflk dkfmbdlkfvd.'
+               },
+
+               {
+                    id:4,
+                    key_date: '1555',
+                    event: 'lkmdflkkdnflk dkfmbdlkfvd.'
+               },
+
+               {
+                    id:5,
                     key_date: '1555',
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
@@ -172,11 +231,7 @@ let biography = [
                     event: 'lkmdflkkdnflk dkfmbdlkfvd.'
                },
 
-               {
-                    id:2,
-                    key_date: '1555',
-                    event: 'lkmdflkkdnflk dkfmbdlkfvd.'
-               },
+              
           ],
                
           
