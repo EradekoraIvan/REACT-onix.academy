@@ -15,7 +15,7 @@ class Biography extends React.Component {
         showEditForm: false,
         selectBiography: {},
         index: '',
-        indexActivPerson: '',
+        indexActivPerson: 0,
         clickPerson: false
     }
 
@@ -86,7 +86,7 @@ class Biography extends React.Component {
      }*/
 
     bubble = (array) => {
-        
+
         const sortArray = [...array]
         const length = sortArray.length;
 
@@ -149,10 +149,12 @@ class Biography extends React.Component {
 
     componentDidMount() {
         window.addEventListener('keyup', this.handleEsc)
+        window.addEventListener('keyup', this.UpDown)
     }
 
     componentWillUnmount() {
         window.removeEventListener('keyup', this.handleEsc)
+        window.removeEventListener('keyup', this.UpDown)
     }
 
     addNewBiography = (biographyObg) => {
@@ -197,21 +199,65 @@ class Biography extends React.Component {
         })
     }
 
-    activePerson =(pos)=>{
-        this.state.indexActivPerson == pos ? 
-        this.setState({
-            indexActivPerson: '',
-            clickPerson: !this.state.clickPerson})
-            
+    UpDown = (e) => {
+       
+        if (e.key === 's') {
+            if(this.state.indexActivPerson || this.state.clickPerson === true) {
+                this.setState({
+                    indexActivPerson: this.state.indexActivPerson + 1,
+                    clickPerson: true
+                })
+            }
+
+            if (this.state.indexActivPerson === 0 && this.state.clickPerson === false) {
+                this.setState({
+                    
+                    clickPerson: true
+                })
+                console.log('++')
+            }
+            if (this.state.indexActivPerson === this.state.array.length - 1) {
+                this.setState({
+                    indexActivPerson: 0,
+                    clickPerson: true
+                })
+            }
+           
+        }
+
+        if (e.key === 'w') {
+            if(this.state.indexActivPerson || this.state.clickPerson === true) {
+                this.setState({
+                    indexActivPerson: this.state.indexActivPerson - 1,
+                    clickPerson: true
+                })
+            }
+            if (this.state.indexActivPerson === 0) {
+                this.setState({
+                    indexActivPerson: this.state.array.length - 1,
+                    clickPerson: true
+                })
+            }
+        }
+    }
+
+    activePerson = (pos) => {
+
+        this.state.indexActivPerson === pos ?
+            this.setState({
+                indexActivPerson: 0,
+                clickPerson: !this.state.clickPerson
+            })
+
             :
 
-        this.setState({
-           
-            indexActivPerson: pos,
-            clickPerson: true
-        })
+            this.setState({
+
+                indexActivPerson: pos,
+                clickPerson: true
+            })
         console.log(this.state.indexActivPerson)
-        
+
     }
 
 
@@ -233,8 +279,8 @@ class Biography extends React.Component {
                     pos={pos}
                     edit={() => this.edit(pos)}
                     hendelSelectBiography={() => this.hendelSelectBiography(item)}
-                    active = {() => this.activePerson(pos)}
-                    classNamePerson= {`${style.person_wrapper} ${this.state.indexActivPerson == pos && this.state.clickPerson ? style.person_wrapper_active : '' }`}
+                    active={() => this.activePerson(pos)}
+                    classNamePerson={`${style.person_wrapper} ${this.state.indexActivPerson === pos && this.state.clickPerson ? style.person_wrapper_active : ''}`}
                 />
             )
         })
