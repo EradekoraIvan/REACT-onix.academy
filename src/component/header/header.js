@@ -35,7 +35,8 @@ class Header extends React.Component {
                         <Link to="#">Контакты</Link>
                     </nav>
                     <div className="icons_list">
-                        <Link onClick={this.increment} className="icon heart" id="heart" to="/"> <p className={this.state.style_heart}>{this.state.counter_like}</p> </Link>
+                        <Link onClick={this.increment} className="icon heart" id="heart" to="/"> <p className=
+                        {this.state.style_heart}>{this.state.counter_like}</p> </Link>
                         <Link className="icon user" to="profile/profile.js" > </Link>
                         <Link className="icon shopping_cart" id="shopping-cart" to="/"> {this.state.counter_shopping_cart} </Link>
                     </div>

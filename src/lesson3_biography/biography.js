@@ -15,6 +15,8 @@ class Biography extends React.Component {
         showEditForm: false,
         selectBiography: {},
         index: '',
+        indexActivPerson: '',
+        clickPerson: false
     }
 
     /* sort = (sortArray) => {
@@ -83,8 +85,9 @@ class Biography extends React.Component {
         return sortArray;
      }*/
 
-    bubble = (sortArray) => {
-
+    bubble = (array) => {
+        
+        const sortArray = [...array]
         const length = sortArray.length;
 
         for (let i = length; i > 0; i--) {
@@ -102,16 +105,13 @@ class Biography extends React.Component {
             }
         }
         return sortArray;
+
     }
 
-    sortArray = () => {
-        const sortArray = [...this.state.array];
-        /* this.qSort(sortArray)
-         console.log(this.qSort(sortArray))*/
-        this.bubble(sortArray)
-        console.log(this.bubble(sortArray))
+    sortArray = (array) => {
+
         this.setState({
-            array: sortArray
+            array: this.bubble(array)
         })
     }
 
@@ -178,7 +178,7 @@ class Biography extends React.Component {
     }
 
 
-    applyСhanges = (editedObg) => {
+    applyChanges = (editedObg) => {
         const temp = [...this.state.array]
         temp.splice(this.state.index, 1, editedObg)
         console.log(temp)
@@ -195,6 +195,23 @@ class Biography extends React.Component {
         this.setState({
             array: temp
         })
+    }
+
+    activePerson =(pos)=>{
+        this.state.indexActivPerson == pos ? 
+        this.setState({
+            indexActivPerson: '',
+            clickPerson: !this.state.clickPerson})
+            
+            :
+
+        this.setState({
+           
+            indexActivPerson: pos,
+            clickPerson: true
+        })
+        console.log(this.state.indexActivPerson)
+        
     }
 
 
@@ -216,7 +233,8 @@ class Biography extends React.Component {
                     pos={pos}
                     edit={() => this.edit(pos)}
                     hendelSelectBiography={() => this.hendelSelectBiography(item)}
-
+                    active = {() => this.activePerson(pos)}
+                    classNamePerson= {`${style.person_wrapper} ${this.state.indexActivPerson == pos && this.state.clickPerson ? style.person_wrapper_active : '' }`}
                 />
             )
         })
@@ -235,12 +253,12 @@ class Biography extends React.Component {
                         hideForm={this.hideForm}
                         array={this.state.array}
                         selectBiography={this.state.selectBiography}
-                        applyСhanges={this.applyСhanges}
+                        applyСhanges={this.applyChanges}
                     />
                     : null}
                 <AddPerson action='Добавить биографию' showForm={this.showForm} />
                 <button className={style.sort_born_btn} onClick={this.sortOfBorn} >Сортировать по дате <br /> рождения (sort)</button>
-                <button className={style.sort_born_btn} onClick={this.sortArray} >Сортировать по <br /> колтичеству ключевых <br /> дат</button>
+                <button className={style.sort_born_btn} onClick={() => this.sortArray(this.state.array)} >Сортировать по <br /> колтичеству ключевых <br /> дат</button>
                 {personarray}
             </div>
         )

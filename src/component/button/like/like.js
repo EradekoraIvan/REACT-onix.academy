@@ -8,25 +8,18 @@ class Like extends React.Component{
         this.state={
             style : true
         };
-        this.likeClick = this.likeClick.bind(this);
     }
 
-likeClick() {
+likeClick =()=> {
     this.setState(state => ({
         style: !state.style
     }));
 }
     render(){
-        if (this.state.style){
+
         return(
-            <span onClick={this.likeClick} className={style.like}></span>
-        );
-        }
-        else {
-            return(
-                <span onClick={this.likeClick} className={`${style.like} ${style.like_active}`}></span>
-            );
-        }
+            <span onClick={this.likeClick} className={`${style.like} ${this.state.style ? style.like_active : ''}`}></span>
+        )
     }
 } 
 export default Like;

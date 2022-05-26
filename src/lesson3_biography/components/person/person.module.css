@@ -1,10 +1,10 @@
-.person{
+/*.person{
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-content: center;
     justify-content: center;
-}
+}*/
 
 .profile{
     grid-column: 1/2;

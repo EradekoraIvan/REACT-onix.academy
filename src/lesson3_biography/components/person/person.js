@@ -5,15 +5,17 @@ import style from './person.module.css';
 
 
 class Person extends React.Component {
+   
     render() {
 
         const hendleEdit = () =>{
             this.props.hendelSelectBiography();
             this.props.edit();
         }
+      
         return (
             <>
-                <div className={style.person}>
+                <div className={this.props.classNamePerson}  onClick={this.props.active}>
                     <div className={style.profile}>
                         <img className={style.profil_img} src={this.props.img} alt="" />
                         <p className={style.profil_name}>{this.props.name}</p>
