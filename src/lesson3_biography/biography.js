@@ -16,7 +16,10 @@ class Biography extends React.Component {
         selectBiography: {},
         index: '',
         indexActivPerson: 0,
-        clickPerson: false
+        clickPerson: false,
+        currentCard: '',
+        indexCurrentCard: '',
+        overCard: '',
     }
 
     /* sort = (sortArray) => {
@@ -200,9 +203,10 @@ class Biography extends React.Component {
     }
 
     UpDown = (e) => {
-       
+
         if (e.key === 's') {
-            if(this.state.indexActivPerson || this.state.clickPerson === true) {
+            
+            if (this.state.indexActivPerson || this.state.clickPerson === true) {
                 this.setState({
                     indexActivPerson: this.state.indexActivPerson + 1,
                     clickPerson: true
@@ -211,7 +215,7 @@ class Biography extends React.Component {
 
             if (this.state.indexActivPerson === 0 && this.state.clickPerson === false) {
                 this.setState({
-                    
+
                     clickPerson: true
                 })
                 console.log('++')
@@ -222,11 +226,11 @@ class Biography extends React.Component {
                     clickPerson: true
                 })
             }
-           
+
         }
 
         if (e.key === 'w') {
-            if(this.state.indexActivPerson || this.state.clickPerson === true) {
+            if (this.state.indexActivPerson || this.state.clickPerson === true) {
                 this.setState({
                     indexActivPerson: this.state.indexActivPerson - 1,
                     clickPerson: true
@@ -239,6 +243,7 @@ class Biography extends React.Component {
                 })
             }
         }
+
     }
 
     activePerson = (pos) => {
@@ -257,6 +262,48 @@ class Biography extends React.Component {
                 clickPerson: true
             })
         console.log(this.state.indexActivPerson)
+
+    }
+
+    DragStartHandler = (e, item, pos) => {
+        this.setState({
+            currentCard: item,
+            indexCurrentCard: pos
+        })
+        console.log('drag', item)
+    }
+
+    DropHandler = (e, item, pos) => {
+        e.preventDefault()
+        console.log('drop', item)
+        const dropArray = [...this.state.array]
+        dropArray.map((el, index) =>{
+            if(el.id === item.id){
+               
+               dropArray[index] = this.state.currentCard;
+               dropArray[this.state.indexCurrentCard] = this.state.overCard;
+               
+            }
+            return dropArray;
+        })
+        this.setState({
+            array: dropArray
+        })
+        console.log(dropArray)
+    }
+
+    DragOverHandler = (e, item) => {
+        e.preventDefault()
+        this.setState({
+            overCard: item
+        })
+    }
+
+    DragLeaveHandler =(e)=>{
+
+    }
+
+    DragEndHandler =(e)=>{
 
     }
 
@@ -280,7 +327,14 @@ class Biography extends React.Component {
                     edit={() => this.edit(pos)}
                     hendelSelectBiography={() => this.hendelSelectBiography(item)}
                     active={() => this.activePerson(pos)}
-                    classNamePerson={`${style.person_wrapper} ${this.state.indexActivPerson === pos && this.state.clickPerson ? style.person_wrapper_active : ''}`}
+                    classNamePerson={`${style.person_wrapper} ${this.state.indexActivPerson === pos
+                        && this.state.clickPerson ? style.person_wrapper_active : ''}`}
+                    draggable={true}
+                    onDragStart={(e) => this.DragStartHandler(e, item, pos)}
+                    onDragLeave={(e) => this.DragLeaveHandler(e)}
+                    onDragEnd={(e) => this.DragEndHandler(e)}
+                    onDragOver={(e) => this.DragOverHandler(e, item)}
+                    onDrop={(e) => this.DropHandler(e, item)}
                 />
             )
         })

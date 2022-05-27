@@ -5,17 +5,26 @@ import style from './person.module.css';
 
 
 class Person extends React.Component {
-   
+
     render() {
 
-        const hendleEdit = () =>{
+        const hendleEdit = () => {
             this.props.hendelSelectBiography();
             this.props.edit();
         }
-      
+
         return (
             <>
-                <div className={this.props.classNamePerson}  onClick={this.props.active}>
+                <div className={this.props.classNamePerson}
+                    onClick={this.props.active}
+                    draggable={this.props.draggable}
+                    onDragStart= {this.props.onDragStart}
+                    onDragLeave= {this.props.onDragLeave}
+                    onDragEnd = {this.props.onDragEnd}
+                    onDragOver= {this.props.onDragOver}
+                    onDrop = {this.props.onDrop}
+                    
+                    >
                     <div className={style.profile}>
                         <img className={style.profil_img} src={this.props.img} alt="" />
                         <p className={style.profil_name}>{this.props.name}</p>
