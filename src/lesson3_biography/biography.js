@@ -153,6 +153,8 @@ class Biography extends React.Component {
     componentDidMount() {
         window.addEventListener('keyup', this.handleEsc)
         window.addEventListener('keyup', this.UpDown)
+        /*window.addEventListener('onLoad', this.onLoad)*/
+        
     }
 
     componentWillUnmount() {
@@ -307,6 +309,15 @@ class Biography extends React.Component {
 
     }
 
+    onLoad =(e)=>{
+        console.log(`изображение ${e.person_name} загруженно`)
+    }
+
+    onError =(e)=>{
+        console.log(`изображение ${e.person_name}: ошибка`)
+    }
+
+
 
     render() {
 
@@ -335,6 +346,8 @@ class Biography extends React.Component {
                     onDragEnd={(e) => this.DragEndHandler(e)}
                     onDragOver={(e) => this.DragOverHandler(e, item)}
                     onDrop={(e) => this.DropHandler(e, item)}
+                    onLoad={()=> this.onLoad(item)}
+                    onError={()=> this.onError(item)}
                 />
             )
         })

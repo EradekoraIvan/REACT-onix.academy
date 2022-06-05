@@ -26,7 +26,7 @@ class Person extends React.Component {
                     
                     >
                     <div className={style.profile}>
-                        <img className={style.profil_img} src={this.props.img} alt="" />
+                        <img className={style.profil_img} id='image_person' src={this.props.img} alt="" onLoad={(e)=> this.props.onLoad()} onError={(e)=>this.props.onError()} />
                         <p className={style.profil_name}>{this.props.name}</p>
                         <p className={style.years_of_life}>{this.props.year_of_birth} - {this.props.year_of_death}</p>
                     </div>
