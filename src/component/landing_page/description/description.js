@@ -13,7 +13,7 @@ class Description extends React.Component{
                 </p>
                 <p><Link to="https://www.figma.com/file/d8EuHOVVRQFLq9Sj3XOxbP/COPPER-(Copy)?node-id=0%3A1"
                         target="_blank">Оригинал макета</Link></p>
-                <p>По флажку <Link to="profile/profile.html" className="a-img"></Link> можно перейти на страницу с Биографиями.
+                <p>По флажку <Link to="profile/profile.js" className="a-img"></Link> можно перейти на страницу с Биографиями.
                 </p>
             </section>
         </div>

@@ -11,7 +11,7 @@ import abraham from './image/abraham.png';
 let biography = [
      {
           id: 1,
-          image: `${bart}`,
+          image: bart,
           person_name: 'Барт Симпсон',
           years_of_life:
           {
@@ -77,7 +77,7 @@ let biography = [
 
      {
           id:2,
-          image: `${homer}`,
+          image: homer,
           person_name: 'Гомер Симпсон',
           years_of_life:
           {
@@ -106,7 +106,7 @@ let biography = [
 
      {
           id:3,
-          image: `${liza}`,
+          image: liza,
           person_name: 'Лиза Симпсон',
           years_of_life:
           {
@@ -140,7 +140,7 @@ let biography = [
 
      {
           id:4,
-          image: `${abraham}`,
+          image: abraham,
           person_name: 'Абрахам Симпсон',
           years_of_life:
           {
@@ -187,7 +187,7 @@ let biography = [
 
      {
           id:5,
-          image: `${mod}`,
+          image: mod,
           person_name: 'Мод Фландерс',
           years_of_life:
           {
@@ -216,7 +216,7 @@ let biography = [
 
      {
           id:6,
-          image: `${ned}`,
+          image: ned,
           person_name: 'Нед Фландерс',
           years_of_life:
           {

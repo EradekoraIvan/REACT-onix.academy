@@ -9,6 +9,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Profile from './component/profile/profile';
+import { Layout } from './Layout/Layout';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,8 +17,10 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="profile/profile.js" element={<Profile/>} />
+        <Route index element={<App />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="profile/profile.js" element={<Profile />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
