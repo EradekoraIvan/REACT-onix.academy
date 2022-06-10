@@ -3,12 +3,22 @@ footer {
     background-repeat: no-repeat;
     min-height: 100%;
     color: #dfdede;
-    
-    
     font-family: 'fontb7ae0d38a8eb699e0938a474bf8e0aa5';
     letter-spacing: 1px;
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
+}
+
+.container{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    row-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    overflow:hidden;
+    z-index: 1;
 }
 
 .footer_wrapper {

@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import Profile from './component/profile/profile';
 import { Layout } from './Layout/Layout';
+import NewsList from './component/News/NewsList/NewsList.js';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,6 +21,7 @@ root.render(
         <Route index element={<App />} />
         <Route path="/" element={<Layout />}>
           <Route path="profile/profile.js" element={<Profile />} />
+          <Route path="News/NewsList/NewsList.js" element={<NewsList/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

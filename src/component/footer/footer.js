@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 class Footer extends React.Component {
     render() {
         return (
-            <footer className="container">
+            <footer className={style.container}>
                 <div className={style.footer_wrapper}>
                     <div className={style.footer_logo}>
                         <img className={style.img} src={logo} alt="logo" />
@@ -19,7 +19,7 @@ class Footer extends React.Component {
                             <h3>Навигация</h3>
                             <ul className={style.ul}>
                                 <li><Link to="/">Каталог</Link></li>
-                                <li><Link to="/">Новости</Link></li>
+                                <li><Link to="News/NewsList/NewsList.js">Новости</Link></li>
                                 <li><Link to="/">Доставка</Link></li>
                                 <li><Link to="/">О нас</Link></li>
                                 <li><Link to="/">Контакты</Link></li>

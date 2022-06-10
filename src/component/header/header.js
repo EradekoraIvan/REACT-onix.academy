@@ -29,7 +29,7 @@ class Header extends React.Component {
                     <Link to="/" className="logo"><img src={logo} alt="Copper Pro" /></Link>
                     <nav>
                         <Link to="/">Каталог</Link>
-                        <Link to="/">Новости</Link>
+                        <Link to="News/NewsList/NewsList.js">Новости</Link>
                         <Link to="/">Доставка</Link>
                         <Link to="#">О нас</Link>
                         <Link to="#">Контакты</Link>
