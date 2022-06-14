@@ -24,24 +24,22 @@ class News extends React.Component {
 
     formatDate = () => {
         const formatDate = [...this.state.array];
-        
+
         for (let i = 0; i < formatDate.length; i++) {
             const temp = new Date(formatDate[i].published_at);
             let year = temp.getFullYear()
             let month = temp.getMonth()
-            if(month < 10) month = '0' + month
+            if (month < 10) month = '0' + month
             let date = temp.getDate()
-            if(date < 10) date = '0' + date
+            if (date < 10) date = '0' + date
             let result = date + '.' + month + '.' + year;
             formatDate[i].published_at = result;
             console.log(formatDate)
         }
-        
+
         /*this.setState({
             array: formatDate
         })*/
-    
-    
     }
     render() {
 
@@ -53,7 +51,7 @@ class News extends React.Component {
                     formatDate={this.formatDate()}
                     key={item.uuid}
                     image={item.image_url}
-                    date={item.published_at}
+                    published_at={item.published_at}
                     h4={item.title}
                     newsText={item.snippet}
                 />
