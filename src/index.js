@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 import Profile from './component/profile/profile';
-import { Layout } from './Layout/Layout';
-import NewsList from './component/News/NewsList/NewsList.js';
-
+import Layout from './Layout/Layout';
+import NewsList from './component/News/NewsList/NewsList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +20,7 @@ root.render(
         <Route index element={<App />} />
         <Route path="/" element={<Layout />}>
           <Route path="profile/profile.js" element={<Profile />} />
-          <Route path="News/NewsList/NewsList.js" element={<NewsList/>}/>
+          <Route path="News/NewsList/NewsList.js" element={<NewsList />} />
         </Route>
       </Routes>
     </BrowserRouter>

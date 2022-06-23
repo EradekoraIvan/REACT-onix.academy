@@ -14,11 +14,14 @@
 }
 .arrow_left_3 {
     transform: rotate(180deg);
+}
+
+.buttonLeft{
     grid-column: 1/2;
     justify-self: start;
 }
 
-.arrow_right_3{
+.buttonRight{
     grid-column: 3/_1;
     justify-self: end;
 }

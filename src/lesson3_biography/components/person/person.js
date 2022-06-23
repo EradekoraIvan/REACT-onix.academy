@@ -1,51 +1,73 @@
-import React from "react";
+import React from 'react';
 import style from './person.module.css';
 
-
-
-
 class Person extends React.Component {
+  render() {
+    const hendleEdit = () => {
+      const { hendelSelectBiography, edit } = this.props;
+      hendelSelectBiography();
+      edit();
+    };
 
-    render() {
+    const {
+      classNamePerson, active, draggable, onDragStart, onDragLeave, onDragEnd, onDragOver, onDrop 
+    } = this.props;
 
-        const hendleEdit = () => {
-            this.props.hendelSelectBiography();
-            this.props.edit();
-        }
+    const {
+      img, onLoad, onError, name, year_of_birth, year_of_death 
+    } = this.props;
+    const { remov } = this.props;
+    const { details } = this.props;
 
-        return (
-            <>
-                <div className={this.props.classNamePerson}
-                    onClick={this.props.active}
-                    draggable={this.props.draggable}
-                    onDragStart= {this.props.onDragStart}
-                    onDragLeave= {this.props.onDragLeave}
-                    onDragEnd = {this.props.onDragEnd}
-                    onDragOver= {this.props.onDragOver}
-                    onDrop = {this.props.onDrop}
-                    
-                    >
-                    <div className={style.profile}>
-                        <img className={style.profil_img} id='image_person' src={this.props.img} alt="" onLoad={(e)=> this.props.onLoad()} onError={(e)=>this.props.onError()} />
-                        <p className={style.profil_name}>{this.props.name}</p>
-                        <p className={style.years_of_life}>{this.props.year_of_birth} - {this.props.year_of_death}</p>
-                    </div>
-                    <div className={style.biography}>
-                        <button className={style.person_btn} onClick={this.props.remov} >Удалить</button>
-                        <button className={style.person_btn} onClick={hendleEdit} >Редактировать</button>
-                        <div className={style.key_dates}>
-                            <h2 className={style.h2}>Ключевые события</h2>
-                            {this.props.key_dates.map(item => <p key={item.id}> {item.key_date} - {item.event} </p>)}
-                        </div>
-                        <div className={style.h2_p}>
-                            <h2 className={style.h2}>Биография</h2>
-                            <p className={style.p_biography}>{this.props.details}</p>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-            </>
-        )
-    }
+    return (
+      <>
+        <div
+          className={classNamePerson}
+          onClick={active}
+          draggable={draggable}
+          onDragStart={onDragStart}
+          onDragLeave={onDragLeave}
+          onDragEnd={onDragEnd}
+          onDragOver={onDragOver}
+          onDrop={onDrop}
+        >
+          <div className={style.profile}>
+            <img className={style.profil_img} id="image_person" src={img} alt="" onLoad={(e) => onLoad()} onError={(e) => onError()} />
+            <p className={style.profil_name}>{name}</p>
+            <p className={style.years_of_life}>
+              {year_of_birth}
+              {' '}
+              - 
+              {' '}
+              {year_of_death}
+            </p>
+          </div>
+          <div className={style.biography}>
+            <button className={style.person_btn} onClick={remov}>Удалить</button>
+            <button className={style.person_btn} onClick={hendleEdit}>Редактировать</button>
+            <div className={style.key_dates}>
+              <h2 className={style.h2}>Ключевые события</h2>
+              {this.props.key_dates.map((item) => (
+                <p key={item.id}> 
+                  {' '}
+                  {item.key_date}
+                  {' '}
+                  - 
+                  {' '}
+                  {item.event}
+                  {' '}
+                </p>
+              ))}
+            </div>
+            <div className={style.h2_p}>
+              <h2 className={style.h2}>Биография</h2>
+              <p className={style.p_biography}>{details}</p>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </>
+    );
+  }
 }
 export default Person; 

@@ -69,3 +69,8 @@ main h2{
     overflow: hidden;
 }
 
+button{
+    border: none;
+    outline: none;
+    background:none;
+}

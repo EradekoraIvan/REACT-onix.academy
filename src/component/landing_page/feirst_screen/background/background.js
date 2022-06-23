@@ -1,22 +1,18 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 import style from './background.module.css';
 
-
-class Background extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-
-        }
-    }
-    render() {
-        return(
-            
-            <img className={style.bgfs} src={this.props.bg} alt=""/>
-            
-        )
-    }
+class Background extends React.Component {
+  render() {
+    const { bg } = this.props;
+    return (
+      <img className={style.bgfs} src={bg} alt="" />
+    );
+  }
 }
 
-export default Background;
+Background.propTypes = {
+  bg: PropTypes.string.isRequired
+};
 
+export default Background;

@@ -49,6 +49,7 @@ section article img{
 
 
 /*SALE*/
+
 .sale::after{
     content: 'sale';
     font-size: 1.4vw;

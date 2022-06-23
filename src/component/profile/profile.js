@@ -1,20 +1,19 @@
-import React from "react";
-import Biography from "../../lesson3_biography/biography";
-
-
+import React from 'react';
+import Biography from '../../lesson3_biography/biography';
 
 class Profile extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+  constructor(props) {
+    super(props);
+    this.state = {
 
-        }
-    }
-    render() {
-        return (
-            <Biography />
-        )
-    }
+    };
+  }
+
+  render() {
+    return (
+      <Biography />
+    );
+  }
 }
 
 export default Profile;
