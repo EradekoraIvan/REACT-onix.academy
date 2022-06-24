@@ -23,7 +23,7 @@ const items = [
 class SliderTestCass extends React.Component{
 
     render (){
-        const { heading, prevHandler, nextHandler, disabledPrev, disabledNext } = this.props
+        const { heading, prevHandler, nextHandler, disabledPrev, disabledNext, innerRef } = this.props
         return(
             <section className="novelty container">
             <h2> {heading} </h2>
@@ -34,7 +34,7 @@ class SliderTestCass extends React.Component{
                 disabledNext={disabledNext}
             />
             <div className={style.sliader} >
-                <div className={style.sliderTrack} ref={this.ref}>
+                <div className={style.sliderTrack} ref={innerRef}>
                     {items.map((item) =>
                         <div className={style.item}>
                             <ArticleProduct key={item.id} image={item.image} />

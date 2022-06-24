@@ -1,31 +1,36 @@
 import React from 'react';
 import style from './novelties.module.css';
-import ArticleProduct from '../ArticleProduct/article_product';
 import CarouselView from '../../../carousel/CarouselView';
 import essentialOil from '../../../../img/product/essential_oil.png';
 import hydrolate from '../../../../img/product/hydrolate.png';
 import tableware from '../../../../img/product/tableware.png';
+import withCarousel from '../../../HOC/withCarousel';
 
-const products = [{ image: `${essentialOil}`, id: 1 },
+const items = [
+  { image: `${essentialOil}`, id: 1 },
   { image: `${hydrolate}`, id: 2 },
-  { image: `${tableware}`, id: 3 },
+  { image: `${essentialOil}`, id: 3 },
+  { image: `${tableware}`, id: 4 },
+  { image: `${hydrolate}`, id: 5 },
+  { image: `${tableware}`, id: 6 },
+  { image: `${essentialOil}`, id: 7 },
+  { image: `${hydrolate}`, id: 8 },
 ];
 
 class Novelties extends React.Component {
   render() {
-    const productsBlock = products.map((item) =>{
-      return(
-        <ArticleProduct
-        key={item.id}
-        image={item.image} />
-      )
-    })
-    return (
-      <CarouselView
-      heading='новинки'
-      products={productsBlock}
-      className={style.novelttiesContainer} />
-    );
+    const { prevHandler, nextHandler, disabledPrev, disabledNext, innerRef } = this.props;
+return (
+  <CarouselView
+    heading='новинки'
+    products={items}
+    className={style.novelttiesContainer}
+    prevHandler={prevHandler}
+    nextHandler={nextHandler}
+    disabledPrev={disabledPrev}
+    disabledNext={disabledNext}
+    innerRef={innerRef} />
+);
   }
 }
-export default Novelties;
+export default withCarousel(Novelties, items);

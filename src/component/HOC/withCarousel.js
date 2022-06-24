@@ -59,12 +59,11 @@ export default function withCarousel(Component, items, ref ) {
         const { prev, next } = this.state;
         return(
             <Component 
-            heading='test class workin'
             prevHandler={() => this.prevHandler()}
             nextHandler={() => this.nextHandler()}
             disabledPrev={prev}
             disabledNext={next}
-            ref={this.ref}/>
+            innerRef={this.ref}/>
         )
     }
    }
