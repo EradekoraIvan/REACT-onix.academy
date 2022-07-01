@@ -1,5 +1,5 @@
 footer {
-    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    background: var(--theme-default-green);
     background-repeat: no-repeat;
     min-height: 100%;
     color: #dfdede;

@@ -1,0 +1,66 @@
+
+
+section article{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+section article img{
+    max-width: 100%;
+}
+
+.cart_p{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 1.6vw;
+    color: var(--theme-default-blackText);
+}
+
+.cart_p_prise{
+    font-weight: 600;
+    font-size: 2vw;
+    margin: 0;
+}
+
+.fool_price{
+    color: #9B0000;
+}
+
+.discount{
+    position: relative;
+    font-size: 16px;
+    color: #A1A1A1;
+    margin: 0;
+    text-align: end;
+}
+
+.discount:before {
+    border-bottom: 1px solid #A1A1A1;
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 50%;
+    transform: rotate(20deg);
+}
+
+
+/*SALE*/
+
+.sale::after{
+    content: 'sale';
+    font-size: 1.4vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px 0px 0px 0px;
+    color: #FFFFFF;
+    background: #9B0000;
+    width: 5vw;
+    height: 2vw;
+    position: absolute;
+    top: 20px;
+}

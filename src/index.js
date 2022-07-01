@@ -1,29 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from 'react-router-dom';
+import ThemeProvaider from './context/themeProvider';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Profile from './component/profile/profile';
-import Layout from './Layout/Layout';
-import NewsList from './component/News/NewsList/NewsList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<App />} />
-        <Route path="/" element={<Layout />}>
-          <Route path="profile/profile.js" element={<Profile />} />
-          <Route path="News/NewsList/NewsList.js" element={<NewsList />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvaider>
+      <App />
+    </ThemeProvaider>
   </React.StrictMode>
 );
 

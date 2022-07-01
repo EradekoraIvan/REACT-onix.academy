@@ -1,3 +1,44 @@
+:root{
+  /*background*/
+  --theme-light-whitePart: rgb(255, 253, 253);
+  --theme-dark-whitePart: rgb(62, 62, 62);
+  --theme-light-grayPart: #f1f1f1;
+  --theme-dark-grayPart:  rgb(27, 27, 27);
+  
+  --theme-default-whitePart: var(--theme-light-whitePart);
+  --theme-default-grayPart: var(--theme-light-grayPart);
+/*text*/
+  --theme-light-blackText: rgb(0, 0, 0);
+  --theme-dark-blackText: rgb(242, 248, 253);
+  --theme-light-whiteText: rgb(255, 253, 253);
+  --theme-dark-whiteText: rgb(25, 68, 102);
+
+  --theme-default-blackText: var(--theme-light-blackText);
+  --theme-default-whiteText: var(--theme-light-whiteText);
+/*gradient*/
+  --theme-light-green: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+  --theme-dark-green: linear-gradient(149deg, rgba(77,54,39,1) 0%, rgba(21,74,65,1) 99%);
+  
+  --theme-default-green: var(--theme-light-green);
+  /*arrow*/
+  --theme-light-blackArrow-border: 1px solid #000000; 
+  --theme-dark-blackArrow-border: 1px solid #ffffff; 
+
+  --theme-default-blackArrow-border: var(--theme-light-blackArrow-border); 
+
+  --theme-light-blackArrow-fill: #000000; 
+  --theme-dark-blackArrow-fill: #ffffff; 
+  
+  --theme-default-blackArrow-fill: var(--theme-light-blackArrow-fill); 
+  /*dots*/
+  --theme-light-dot: #000000;
+  --theme-dark-dot: #ffffff;
+  
+  --theme-default-dot: var(--theme-light-dot);
+
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +52,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+

@@ -1,0 +1,12 @@
+.first_screen_wrapper{
+background: var(--theme-default-green);
+position: relative;
+padding-top: 0;
+display: grid;
+grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
+grid-template-rows: 1fr 6.7fr;
+align-items: center;
+grid-column-gap: 10px;
+color: #FFFFFF;
+z-index: 1;
+}

@@ -3,6 +3,7 @@ import './header.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import logo from '../../img/svg/logo.svg';
+import ThemeButton from '../themeButton/ThemeButton';
 
 class Header extends React.Component {
   constructor(props) {
@@ -35,24 +36,27 @@ class Header extends React.Component {
             <Link to="/">Доставка</Link>
             <Link to="/">О нас</Link>
             <Link to="/">Контакты</Link>
+            <Link to="pages/biography/biography.js">Биографии</Link>
           </nav>
-          <div className="icons_list">
-            <Link onClick={this.increment} className="icon heart" id="heart" to="/"> 
-              {' '}
-              <p className={styleHeart}>
-                {counterLike}
-              </p>
-              {' '}
- 
-            </Link>
-            <Link className="icon user" to="profile/profile.js"> </Link>
-            <Link className="icon shopping_cart" id="shopping-cart" to="/"> 
-              {' '}
-              {counterShoppingCart}
-              {' '}
-            </Link>
-          </div>
+          <div className="ThemeIconsWrapper">
+            <ThemeButton />
+            <div className="icons_list">
+              <Link onClick={this.increment} className="icon heart" id="heart" to="/">
+                {' '}
+                <p className={styleHeart}>
+                  {counterLike}
+                </p>
+                {' '}
 
+              </Link>
+              <Link className="icon user" to="profile/profile.js"> </Link>
+              <Link className="icon shopping_cart" id="shopping-cart" to="/">
+                {' '}
+                {counterShoppingCart}
+                {' '}
+              </Link>
+            </div>
+          </div>
           <Link to="/" className="nav_mobail">
             <img src="../img/img_1screen/mb.png" alt="Меню" className="nav_mobail_img" />
           </Link>

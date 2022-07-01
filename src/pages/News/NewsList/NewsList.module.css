@@ -1,0 +1,7 @@
+.news_h1{
+    grid-column: 2/3;
+    justify-self: left;
+    font-size: 50px;
+    margin: 0;
+    color: var(--theme-default-blackText)
+}

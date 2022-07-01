@@ -1,3 +1,7 @@
+.ThemeIconsWrapper{
+    display: grid;
+    grid-auto-flow: column;
+}
 .none{
     display: none;
 }
@@ -17,7 +21,7 @@
 
   .header_style{
     grid-column: 1/-1;
-    background: linear-gradient(285.45deg, #0B3F37 38.27%, #CB8D62 141.81%);
+    background: var(--theme-default-green);
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     height: 135px;
@@ -61,7 +65,6 @@ nav a:hover {
 }
 
 .icons_list {
-    grid-column: 3/4;
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

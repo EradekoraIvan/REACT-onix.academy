@@ -14,7 +14,7 @@ main .dots{
 }
 
 main .dots .dot{
-    background: #000000;
+    background: var(--theme-default-dot);
     margin-top: 20px;
     margin-bottom: 20px;
 }

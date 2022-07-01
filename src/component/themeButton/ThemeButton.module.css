@@ -1,0 +1,23 @@
+.themeButtonWrapper{
+    display: grid;
+    grid-auto-flow: row;
+    width: fit-content;
+}
+
+.themeButtonLight{
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    height: fit-content;
+    padding: 5px;
+    align-self: center;
+    color: black;
+}
+
+.themeButtonDark{
+    border-radius: 5px;
+    background: rgb(78, 78, 78);
+    height: fit-content;
+    padding: 5px;
+    align-self: center;
+    color: white;
+}

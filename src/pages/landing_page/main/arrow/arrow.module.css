@@ -1,0 +1,36 @@
+.arrow_left_3,
+.arrow_right_3{
+    margin: 0px;
+    width: 70px;
+    height: 35px;
+    cursor: pointer;
+    border: var(--theme-default-blackArrow-border);
+    border-right: none;
+    grid-row: 1/5;
+}
+.arrow_left_3 path,
+.arrow_right_3 path{
+    fill: var(--theme-default-blackArrow-fill);
+}
+.arrow_left_3 {
+    transform: rotate(180deg);
+}
+
+.buttonLeft{
+    grid-column: 1/2;
+    justify-self: start;
+    padding: 0;
+}
+
+.buttonRight{
+    grid-column: 3/_1;
+    justify-self: end;
+    padding: 0;
+}
+
+.arrow_left_3:hover path, .arrow_right_3:hover path,
+.arrow_right_3:hover, .arrow_left_3:hover{
+    fill: rgb(255, 255, 255);
+    border: none;
+    background: linear-gradient(92.18deg, #E4A16F 20.13%, #5E3928 92.93%);
+}

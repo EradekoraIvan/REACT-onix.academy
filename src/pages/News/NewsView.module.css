@@ -1,0 +1,43 @@
+/*.news_item_wrapper{
+
+}*/
+
+.image_container{
+    height: 15vw;
+    position: relative;
+    z-index: 1;
+}
+
+.news_image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.date{
+    display: grid;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #FFFFFF;
+    background: linear-gradient(92.18deg, #5E3928 20.13%, #E4A16F 92.93%);;
+}
+
+.h4{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 20px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.news_text{
+    color: var(--theme-default-blackText);
+}
