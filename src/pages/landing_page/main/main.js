@@ -2,7 +2,7 @@ import React from 'react';
 import './main.css';
 import OurProduction from './our_production/our_production';
 import BestSelling from './best_selling/best_selling';
-import Novelties from './novelty/temp';
+import Novelties from './novelty/novelties';
 import Stock from './stock/stock';
 import Recommend from './recommend/recommend';
 import Discounts from './discounts/discounts';

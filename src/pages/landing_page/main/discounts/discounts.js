@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './discounts.module.css';
-import CarouselView from '../../../../component/carousel/CarouselView';
+import CarouselView from '../../../../component/carousel/CarouselProducts';
 import essentialOil from '../../../../img/product/essential_oil.png';
 import hydrolate from '../../../../img/product/hydrolate.png';
 import tableware from '../../../../img/product/tableware.png';
@@ -17,24 +17,25 @@ const items = [
   { image: `${hydrolate}`, id: 8 },
 ];
 
-class Discouts extends React.Component {
-  render() {
-    const {
-      prevHandler, nextHandler, disabledPrev, disabledNext, innerRef 
-    } = this.props;
-    return (
-      <CarouselView
-        heading="скики"
-        products={items}
-        className={style.discountsContainer}
-        prevHandler={prevHandler}
-        nextHandler={nextHandler}
-        disabledPrev={disabledPrev}
-        disabledNext={disabledNext}
-        innerRef={innerRef}
-      />
-    );
-  }
+function Discouts({
+  prevHandler,
+  nextHandler,
+  disabledPrev,
+  disabledNext,
+  innerRef
+}) {
+  return (
+    <CarouselView
+      heading="скики"
+      products={items}
+      className={style.discountsContainer}
+      prevHandler={prevHandler}
+      nextHandler={nextHandler}
+      disabledPrev={disabledPrev}
+      disabledNext={disabledNext}
+      innerRef={innerRef}
+    />
+  );
 }
 
 export default withCarousel(Discouts, items);

@@ -72,7 +72,7 @@ const icons = [
 class WhyChooseUs extends React.Component {
   render() {
     return (
-      <section className="why_choose_us container">
+      <section className={style.why_choose_us}>
         <h2>почему выбирают нас</h2>
         <ul className={style.ul}>
           {icons.map((item) => <Li key={item.id} icon={item.icon} h={item.h} p={item.p} details={item.details} />)}

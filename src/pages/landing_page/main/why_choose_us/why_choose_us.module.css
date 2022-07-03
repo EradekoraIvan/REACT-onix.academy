@@ -1,4 +1,20 @@
+.why_choose_us{
+    background: var(--theme-default-grayPart);
+    padding-bottom: 30px;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    row-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    overflow:hidden;
+    z-index: 1;
+    color: var(--theme-default-blackText);
+}
+
 h3{
+    color: var(--theme-default-blackText);
     font-size: 18px;
 }
 

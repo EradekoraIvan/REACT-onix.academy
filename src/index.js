@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import ThemeProvaider from './context/themeProvider';
+import LikeProvider from './context/likeProvider';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,7 +10,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvaider>
-      <App />
+      <LikeProvider>
+        <App />
+      </LikeProvider>
     </ThemeProvaider>
   </React.StrictMode>
 );
