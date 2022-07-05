@@ -6,18 +6,9 @@
 
 .themeButtonLight{
     border-radius: 5px;
-    background: rgb(255, 255, 255);
+    background: var(--theme-default-whitePart);
     height: fit-content;
     padding: 5px;
     align-self: center;
-    color: black;
-}
-
-.themeButtonDark{
-    border-radius: 5px;
-    background: rgb(78, 78, 78);
-    height: fit-content;
-    padding: 5px;
-    align-self: center;
-    color: white;
+    color: var(--theme-default-blackText);
 }
