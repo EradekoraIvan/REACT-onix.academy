@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './NewsList.module.css';
-import News from '../News';
+import News from '../temp';
 
 class NewsList extends React.Component {
   render() {

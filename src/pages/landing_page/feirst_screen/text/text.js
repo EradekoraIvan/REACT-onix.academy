@@ -4,8 +4,7 @@ import BuyButton from '../../../../component/button/buy_button/buy_batton';
 import Dots from '../../../../component/button/dots/dots_fs';
 import Line from '../../../../img/slider_ferst_screen/Line_1.png';
 
-class Text extends React.Component {
-  render() {
+function Text() {
     return (
       <div className="text">
         <h1>Хит продаж</h1>
@@ -26,6 +25,5 @@ class Text extends React.Component {
       </div>
     );
   }
-} 
 
 export default Text;

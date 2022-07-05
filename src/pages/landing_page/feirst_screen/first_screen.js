@@ -8,15 +8,7 @@ import Text from './text/text';
 import SliderImg from './slider_img/slider_img';
 import CopperPro from '../copper_pro/copper_pro';
 
-class FirstScreen extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
-
-  render() {
+function FirstScreen() {
     return (
       <div className="first_screen_wrapper">
         <Background bg={bg} />
@@ -29,6 +21,5 @@ class FirstScreen extends React.Component {
 
     );
   }
-}
 
 export default FirstScreen;

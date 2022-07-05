@@ -10,8 +10,7 @@ import Reviews from './reviews/reviews';
 import WhyChooseUs from './why_choose_us/why_choose_us';
 import Footer from '../../../component/footer/footer';
 
-class Main extends React.Component {
-  render() {
+function Main() {
     return (
       <main>
         <OurProduction />
@@ -26,6 +25,5 @@ class Main extends React.Component {
       </main>
     );
   }
-}
 
 export default Main;

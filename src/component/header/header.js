@@ -7,8 +7,7 @@ import ThemeButton from '../themeButton/ThemeButton';
 import {useLike} from '../../context/likeProvider';
 
 function Header({headerStyle}) {
-    const [counterLike, setCounterLike] = useState(0);
-    const [counterShoppingCart, setCounterShoppingCart] = useState(1);
+    const [counterShoppingCart, setCounterShoppingCart] = useState(0);
 
     const itsCounter = useLike();
 
@@ -37,7 +36,7 @@ function Header({headerStyle}) {
                         <Link className="icon user" to="profile/profile.js"> </Link>
                         <Link className="icon shopping_cart" id="shopping-cart" to="/">
                             {' '}
-                            {counterShoppingCart}
+                            {counterShoppingCart || ''}
                             {' '}
                         </Link>
                     </div>

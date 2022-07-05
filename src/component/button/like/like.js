@@ -4,15 +4,16 @@ import { useLike } from '../../../context/likeProvider';
 
 function Like() {
 
-  const [styleLike, setstyleLike] = useState(/*() => {
-   const saved = localStorage.getItem("styleLike");
-    const initialValue = JSON.parse(saved);
-    return initialValue ||*/ false/*;
-  }*/);
+  const [styleLike, setStyleLike] = useState(false);
 
-  /*useEffect(() => {
-    const saved = localStorage.setItem("styleLike", JSON.stringify(styleLike));
-  }, [styleLike]);*/
+  useEffect(()=>{
+    const saved = localStorage.getItem('styleLike');
+    setStyleLike(JSON.parse(saved))
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("styleLike", JSON.stringify(styleLike));
+  }, [styleLike]);
 
   const likeSelect = (e) => {
     if (e.keyCode === 'l') {
@@ -21,7 +22,7 @@ function Like() {
   };
 
   const likeClick = () => {
-    setstyleLike(!styleLike);  
+    setStyleLike(!styleLike);  
   };
 
   const like = useLike();
