@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './header.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -8,8 +8,11 @@ import {useLike} from '../../context/likeProvider';
 
 function Header({headerStyle}) {
     const [counterShoppingCart, setCounterShoppingCart] = useState(0);
-
     const itsCounter = useLike();
+    const counterLike = localStorage.getItem('likeCaunter');
+    useEffect(() =>{
+        localStorage.setItem('likeCaunter', JSON.stringify(itsCounter.isLike));
+    },[itsCounter.isLike])
 
     return (
         <header className={headerStyle}>
@@ -29,7 +32,7 @@ function Header({headerStyle}) {
                         <Link className="icon heart" id="heart" to="/">
                             {' '}
                             <p>
-                                {itsCounter.isLike || ''}
+                                { itsCounter.isLike || JSON.parse(counterLike) || '' }
                             </p>
                             {' '}
                         </Link>

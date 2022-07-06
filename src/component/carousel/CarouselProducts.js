@@ -32,7 +32,7 @@ function CarouselView(
         <div className={style.sliderTrack} ref={innerRef}>
           {products.map((item) => (
             <div className={style.item}>
-              <ArticleProduct key={item.id} image={item.image} />
+              <ArticleProduct key={item.id} image={item.image} id={item.id} />
             </div>
           ))}
         </div>

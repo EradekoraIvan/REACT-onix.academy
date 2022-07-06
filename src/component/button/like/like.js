@@ -2,17 +2,18 @@ import React, { useEffect, useState } from 'react';
 import style from './like.module.css';
 import { useLike } from '../../../context/likeProvider';
 
-function Like() {
+function Like(id) {
 
   const [styleLike, setStyleLike] = useState(false);
-
+  const saved = localStorage.getItem(JSON.stringify(id)) || false; 
   useEffect(()=>{
-    const saved = localStorage.getItem('styleLike');
     setStyleLike(JSON.parse(saved))
+    console.log(saved)
   }, [])
+ 
 
   useEffect(() => {
-    localStorage.setItem("styleLike", JSON.stringify(styleLike));
+    localStorage.setItem(JSON.stringify(id), JSON.stringify(styleLike));
   }, [styleLike]);
 
   const likeSelect = (e) => {
@@ -22,7 +23,7 @@ function Like() {
   };
 
   const likeClick = () => {
-    setStyleLike(!styleLike);  
+    setStyleLike(!styleLike); 
   };
 
   const like = useLike();
