@@ -7,6 +7,10 @@
     color: var(--theme-default-blackText)
 }
 
+.ReorderGroup{
+    list-style: none;
+}
+
 .biography_btn{
     align-self: end;
     justify-self: right;

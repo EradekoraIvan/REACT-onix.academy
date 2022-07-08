@@ -6,10 +6,10 @@ import { useTheme, THEME_LIGHT, THEME_DARK } from '../../context/themeProvider';
 function ThemeButton() {
   const [theme, setTheme] = useState(true);
   const isTheme = useTheme();
-  const changeTheme = () =>{
+  const changeTheme = () => {
     setTheme(!theme);
-    isTheme.change(theme ? THEME_DARK: THEME_LIGHT)
-  }
+    isTheme.change(theme ? THEME_DARK : THEME_LIGHT);
+  };
   const selectTheme = theme ? 'Light' : 'Dark';
   return (
     <div className={style.themeButtonWrapper}>

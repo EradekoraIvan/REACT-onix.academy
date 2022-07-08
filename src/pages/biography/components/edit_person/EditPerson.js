@@ -1,177 +1,153 @@
-import React from 'react';
+import React, { useState } from 'react';
 import update from 'immutability-helper';
 import style from './Edit.Person.module.css';
 
-class EditPersonForm extends React.Component {
-  state = {
-    id: this.props.selectBiography.id,
-    image: this.props.selectBiography.image,
-    personName: this.props.selectBiography.person_name,
-    personBiography: this.props.selectBiography.biography,
-    editKeyDate: false,
-    keyDatesArray: this.props.selectBiography.key_dates,
-    year_of_birth: this.props.selectBiography.years_of_life.year_of_birth,
-    year_of_death: this.props.selectBiography.years_of_life.year_of_death,
-    input_key_date: '',
-    input_value: '098765',
+function EditPersonForm({ selectBiography, applyСhanges, hideForm }) {
+  const [id, setId] = useState(selectBiography.id);
+  const [image, setImage] = useState(selectBiography.image);
+  const [personName, setPersonName] = useState(selectBiography.person_name);
+  const [personBiography, setPersonBiography] = useState(selectBiography.biography);
+  const [editKeyDate, setEditKeyDate] = useState(false);
+  const [keyDatesArray, setKeyDatesArray] = useState(selectBiography.key_dates);
+  const [year_of_birth, setYear_of_birth] = useState(selectBiography.years_of_life.year_of_birth);
+  const [year_of_death, setYear_of_death] = useState(selectBiography.years_of_life.year_of_death);
+  const [input_key_date, setInput_key_date] = useState('');
+  const [input_value, setInput_value] = useState('');
+
+  const handleYearBirth = (e) => {
+    setYear_of_birth(e.target.value);
   };
 
-  handleYearBirth = (e) => {
-    this.setState({
-      year_of_birth: e.target.value
-    });
+  const handelYearDeath = (e) => {
+    setYear_of_death(e.target.value);
   };
 
-  handelYearDeath = (e) => {
-    this.setState({
-      year_of_death: e.target.value
-    });
+  const handlePersonName = (e) => {
+    setPersonName(e.target.value);
   };
 
-  handlePersonName = (e) => {
-    this.setState({
-      personName: e.target.value
-    });
+  const handlePersonBiography = (e) => {
+    setPersonBiography(e.target.value);
   };
 
-  handlePersonBiography = (e) => {
-    this.setState({
-      personBiography: e.target.value
-    });
-  };
-
-  hendleKeyDate = (e, pos) => {
-    const temp = [...this.state.keyDatesArray];
+  const hendleKeyDate = (e, pos) => {
+    const temp = [...keyDatesArray];
     const newTemp = update(temp, {
       [pos]: { key_date: { $set: e.target.value } }
     });
-
-    this.setState({
-      input_key_date: e.target.value,
-      keyDatesArray: newTemp,
-
-    });
+    setInput_key_date(e.target.value);
+    setKeyDatesArray(newTemp);
   };
 
-  hendleEvent = (e, pos) => {
-    const temp = [...this.state.keyDatesArray];
+  const hendleEvent = (e, pos) => {
+    const temp = [...keyDatesArray];
     const newTemp = update(temp, {
       [pos]: { event: { $set: e.target.value } }
     });
-
-    this.setState({
-      input_key_date: e.target.value,
-      keyDatesArray: newTemp,
-
-    });
+    setInput_key_date(e.target.value);
+    setKeyDatesArray(newTemp);
   };
 
-  editKeyDate = () => {
+  const changeEditKeyDate = () => {
     console.log('редактирую');
-
-    this.setState({
-            
-      editKeyDate: true
-    });
+    setEditKeyDate(true);
   };
 
-  saveСhanges = () => {
-    const temp = [...this.state.keyDatesArray];
+  const saveСhanges = () => {
+    const temp = [...keyDatesArray];
     console.log(temp);
     const editedObg = {
-      id: this.state.id + 50,
-      image: this.state.image,
-      person_name: this.state.personName,
+      id: id + 50,
+      image,
+      person_name: personName,
       years_of_life:
             {
-              year_of_birth: this.state.year_of_birth,
-              year_of_death: this.state.year_of_death,
+              year_of_birth,
+              year_of_death,
             },
       key_dates: temp,
 
-      biography: this.state.personBiography,
+      biography: personBiography,
     };
 
-    this.props.applyСhanges(editedObg);
+    applyСhanges(editedObg);
 
-    this.props.hideForm();
+    hideForm();
   };
 
-  render() {
-    const addInput = this.state.keyDatesArray.map((item, pos) => {
-      return (
-        <div key={item.id}>
-          <p>Дата</p>
-          <input
-
-            type="text"
-            name="key_date"
-            value={this.state.keyDatesArray[pos].key_date}
-            onChange={(e) => this.hendleKeyDate(e, pos)}
-          />
-          <p>Событие</p>
-          <input
-
-            type="text"
-            name="event"
-            value={this.state.keyDatesArray[pos].event}
-            onChange={(e) => this.hendleEvent(e, pos)}
-          />
-        </div>
-      );
-    });
-
+  const addInput = keyDatesArray.map((item, pos) => {
     return (
-      <>
-        <form className={style.form_containrt} action="">
-          <h2>Отредактируйте даные</h2>
-          <label htmlFor="person_name">Полное имя</label>
-          <input
-            className={style.input}
-            type="text"
-            name="person_name"
-            id="person_name"
-            placeholder="name"
-            value={this.state.personName}
-            onChange={this.handlePersonName}
-          />
-          <label htmlFor="year_of_birth">Год рождения</label>
-          <input
-            type="number"
-            name="year_of_birth"
-            id="year_of_birth"
-            value={this.state.year_of_birth}
-            onChange={this.handleYearBirth}
-          />
-          <label htmlFor="year_of_death">Год смерти</label>
-          <input
-            type="number"
-            name="year_of_death"
-            id="year_of_death"
-            value={this.state.year_of_death}
-            onChange={this.handelYearDeath}
-          />
+      <div key={item.id}>
+        <p>Дата</p>
+        <input
 
-          {this.state.editKeyDate ? addInput : null}
+          type="text"
+          name="key_date"
+          value={keyDatesArray[pos].key_date}
+          onChange={(e) => hendleKeyDate(e, pos)}
+        />
+        <p>Событие</p>
+        <input
 
-          <button type="button" className={style.add_btn} onClick={this.editKeyDate}>Редактировать ключевые даты</button>
-          <label htmlFor="biography">Биография</label>
-          <textarea
-            className={style.input}
-            name="biography"
-            id="biography"
-            rows="10"
-            placeholder="biography"
-            value={this.state.personBiography}
-            onChange={this.handlePersonBiography}
-          />
-          <button className={style.add_btn} type="button" onClick={this.saveСhanges}>Сохранить изменения</button>
-        </form>
-        <div className={style.overley} onClick={this.props.hideForm} />
-      </>
-
+          type="text"
+          name="event"
+          value={keyDatesArray[pos].event}
+          onChange={(e) => hendleEvent(e, pos)}
+        />
+      </div>
     );
-  }
+  });
+
+  return (
+    <>
+      <form className={style.form_containrt} action="">
+        <h2>Отредактируйте даные</h2>
+        <label htmlFor="person_name">Полное имя</label>
+        <input
+          className={style.input}
+          type="text"
+          name="person_name"
+          id="person_name"
+          placeholder="name"
+          value={personName}
+          onChange={handlePersonName}
+        />
+        <label htmlFor="year_of_birth">Год рождения</label>
+        <input
+          type="number"
+          name="year_of_birth"
+          id="year_of_birth"
+          value={year_of_birth}
+          onChange={handleYearBirth}
+        />
+        <label htmlFor="year_of_death">Год смерти</label>
+        <input
+          type="number"
+          name="year_of_death"
+          id="year_of_death"
+          value={year_of_death}
+          onChange={handelYearDeath}
+        />
+
+        {editKeyDate ? addInput : null}
+
+        <button type="button" className={style.add_btn} onClick={changeEditKeyDate}>Редактировать ключевые даты</button>
+        <label htmlFor="biography">Биография</label>
+        <textarea
+          className={style.input}
+          name="biography"
+          id="biography"
+          rows="10"
+          placeholder="biography"
+          value={personBiography}
+          onChange={handlePersonBiography}
+        />
+        <button className={style.add_btn} type="button" onClick={saveСhanges}>Сохранить изменения</button>
+      </form>
+      <div className={style.overley} onClick={hideForm} />
+    </>
+
+  );
 }
 
 export default EditPersonForm;

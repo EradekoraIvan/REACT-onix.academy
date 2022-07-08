@@ -9,12 +9,13 @@ function Description() {
         <h2>Интернет магазин медной посуды</h2>
         <p>Автор: Новиков Иван</p>
         <p>
-          <a href='https://github.com/EradekoraIvan/REACT-onix.academy' target="_blank">Ссылка на Github</a>
+          <a href="https://github.com/EradekoraIvan/REACT-onix.academy" target="_blank" rel="noreferrer">Ссылка на Github</a>
         </p>
         <p>
           <a
             href="https://www.figma.com/file/d8EuHOVVRQFLq9Sj3XOxbP/COPPER-(Copy)?node-id=0%3A1"
             target="_blank"
+            rel="noreferrer"
           >
             Оригинал макета
           </a>

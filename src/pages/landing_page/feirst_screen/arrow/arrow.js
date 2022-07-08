@@ -2,7 +2,6 @@ import React from 'react';
 import './arrow.css';
 
 function Arrow() {
-
   return (
     <>
       <svg className="arrow-left-3" viewBox="0 0 9 9">
@@ -18,6 +17,5 @@ function Arrow() {
     </>
   );
 }
-
 
 export default Arrow;

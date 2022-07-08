@@ -9,17 +9,17 @@ import SliderImg from './slider_img/slider_img';
 import CopperPro from '../copper_pro/copper_pro';
 
 function FirstScreen() {
-    return (
-      <div className="first_screen_wrapper">
-        <Background bg={bg} />
-        <Headrer headerStyle="header_style_fs" />
-        <Arrow />
-        <Text />
-        <SliderImg />
-        <CopperPro />
-      </div>
+  return (
+    <div className="first_screen_wrapper">
+      <Background bg={bg} />
+      <Headrer headerStyle="header_style_fs" />
+      <Arrow />
+      <Text />
+      <SliderImg />
+      <CopperPro />
+    </div>
 
-    );
-  }
+  );
+}
 
 export default FirstScreen;

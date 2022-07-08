@@ -11,19 +11,19 @@ import WhyChooseUs from './why_choose_us/why_choose_us';
 import Footer from '../../../component/footer/footer';
 
 function Main() {
-    return (
-      <main>
-        <OurProduction />
-        <BestSelling />
-        <Novelties />
-        <Stock />
-        <Recommend />
-        <Discounts /> 
-        <Reviews />
-        <WhyChooseUs />
-        <Footer />
-      </main>
-    );
-  }
+  return (
+    <main>
+      <OurProduction />
+      <BestSelling />
+      <Novelties />
+      <Stock />
+      <Recommend />
+      <Discounts /> 
+      <Reviews />
+      <WhyChooseUs />
+      <Footer />
+    </main>
+  );
+}
 
 export default Main;

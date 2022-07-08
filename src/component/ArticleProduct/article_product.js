@@ -5,11 +5,12 @@ import Like from '../button/like/like';
 
 class ArticleProduct extends React.Component {
   render() {
-    const { image, id } = this.props;
+    const { image, id, index } = this.props;
     return (
       <article className={style.sale}>
         <Like
-        id= {id}
+          id={id}
+          index={index}
         />   
         <img src={image} alt="" />
         <div className={style.cart_p}>

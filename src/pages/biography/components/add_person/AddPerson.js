@@ -2,17 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './AddPerson.module.css';
 
-class AddPerson extends React.Component {
-  render() {
-    const { action, showForm } = this.props;
-    return (
-      <button type="button" className={style.biography_btn} onClick={showForm}> 
-        {' '}
-        {action}
-        {' '}
-      </button>
-    );
-  }
+function AddPerson({ action, showForm }) {
+  return (
+    <button type="button" className={style.biography_btn} onClick={showForm}>
+      {' '}
+      {action}
+      {' '}
+    </button>
+  );
 }
 
 AddPerson.propTypes = {

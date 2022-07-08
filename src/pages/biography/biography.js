@@ -84,7 +84,6 @@ class Biography extends React.Component {
   componentDidMount() {
     window.addEventListener('keyup', this.handleEsc);
     window.addEventListener('keyup', this.UpDown);
-    /* window.addEventListener('onLoad', this.onLoad) */
   }
 
   componentWillUnmount() {

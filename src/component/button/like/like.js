@@ -2,15 +2,13 @@ import React, { useEffect, useState } from 'react';
 import style from './like.module.css';
 import { useLike } from '../../../context/likeProvider';
 
-function Like(id) {
-
+function Like(id, index) {
   const [styleLike, setStyleLike] = useState(false);
-  const saved = localStorage.getItem(JSON.stringify(id)) || false; 
-  useEffect(()=>{
-    setStyleLike(JSON.parse(saved))
-    console.log(saved)
-  }, [])
- 
+  const saved = localStorage.getItem(JSON.stringify(id)) || false;
+  useEffect(() => {
+    setStyleLike(JSON.parse(saved));
+    console.log(saved);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(JSON.stringify(id), JSON.stringify(styleLike));
@@ -23,21 +21,24 @@ function Like(id) {
   };
 
   const likeClick = () => {
-    setStyleLike(!styleLike); 
+    setStyleLike(!styleLike);
   };
 
   const like = useLike();
 
   const counter = () => {
-    like.changeIsLike(styleLike ? -1 : +1)
-  }
+    /*like.changeIsLike(styleLike ? -1 : +1);*/
+    styleLike ?
+      like.dell(index) :
+      like.changeLikeId(id)
+  };
   return (
     <span
       role="button"
       aria-label="like"
       tabIndex="0"
       onClick={() => {
-        likeClick()
+        likeClick();
         counter()
       }}
       onKeyDown={likeSelect}

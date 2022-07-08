@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './NewsView.module.css';
 import moment from 'moment';
+import style from './NewsView.module.css';
 
-function NewsView({image, publishedAt, h4, newsText}) {
+function NewsView({
+  image, publishedAt, h4, newsText 
+}) {
   return (
     <div className={style.news_item_wrapper}>
       <div className={style.image_container}>

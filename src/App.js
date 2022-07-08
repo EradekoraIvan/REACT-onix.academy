@@ -6,7 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Profile from './pages/profile/profile';
-import Biography from './pages/biography/biography';
+import Biography from './pages/biography/temp';
 import Layout from './Layout/Layout';
 import NewsList from './pages/News/NewsList/NewsList';
 import LandingPage from './pages/landing_page/landingPage';
