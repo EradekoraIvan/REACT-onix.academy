@@ -1,4 +1,5 @@
 import React from 'react';
+import './i18n/index';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import ThemeProvaider from './context/themeProvider';

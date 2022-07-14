@@ -8,7 +8,7 @@ import AddPersonForm from './components/add_person/addPersonForm/addPersonForm';
 import EditPersonForm from './components/edit_person/EditPerson';
 
 function Biography() {
-  const [array, setArray] = useState(/* JSON.parse(localStorage.getItem('personarray')) || */ biography);
+  const [array, setArray] = useState(biography);
   const [showAddPersonForm, setShowAddPersonForm] = useState(false);
   const [showEditForm, setShowEditForm] = useState(false);
   const [selectBiography, setSelectBiography] = useState({});
@@ -32,7 +32,7 @@ function Biography() {
   };
 
   const sortArray = (babbleArray) => {
-    setArray(bubble(babbleArray))
+    setArray(bubble(babbleArray));
   };
 
   const removPerson = (pos) => {

@@ -27,10 +27,9 @@ function Like(id, index) {
   const like = useLike();
 
   const counter = () => {
-    /*like.changeIsLike(styleLike ? -1 : +1);*/
-    styleLike ?
-      like.dell(index) :
-      like.changeLikeId(id)
+    styleLike
+      ? like.dell(index)
+      : like.changeLikeId(id);
   };
   return (
     <span
@@ -39,7 +38,7 @@ function Like(id, index) {
       tabIndex="0"
       onClick={() => {
         likeClick();
-        counter()
+        counter();
       }}
       onKeyDown={likeSelect}
       className={`${style.like} ${styleLike ? style.like_active : ''}`}

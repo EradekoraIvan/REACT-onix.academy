@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import style from './best_selling.module.css';
 import CarouselView from '../../../../component/carousel/CarouselProducts';
 import essentialOil from '../../../../img/product/essential_oil.png';
@@ -24,9 +25,10 @@ function BestSelling({
   disabledNext,
   innerRef
 }) {
+  const { t } = useTranslation();
   return (
     <CarouselView
-      heading="лучшие продажи"
+      heading={t('best_selling')}
       products={items}
       className={style.bestSellingContainer}
       prevHandler={prevHandler}

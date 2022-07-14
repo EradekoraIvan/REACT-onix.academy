@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import photo from '../../../../img/reviews/Ivanov.png';
 import withCarousel from '../../../../HOC/withCarousel';
 import CarouselReviews from '../../../../component/carousel/CarouselReviews';
@@ -20,9 +21,10 @@ function Reviews({
   disabledNext,
   innerRef,
 }) {
+  const { t } = useTranslation();
   return (
     <CarouselReviews
-      heading="что думают о нас"
+      heading={t('reviews.reviews_header')}
       products={reviewsImg}
       className={style.reviews}
       prevHandler={prevHandler}

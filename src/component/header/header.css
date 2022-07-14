@@ -1,7 +1,30 @@
-.ThemeIconsWrapper{
+.ThemeLngWrapper{
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    justify-self: right;
+}
+
+.ls{
+    position: fixed;
+}
+
+.ThemeIconsLngWrapper{
     display: grid;
     grid-auto-flow: column;
 }
+
+.lngBtn{
+    border-radius: 5px;
+    background: var(--theme-default-whitePart);
+    height: fit-content;
+    padding: 5px;
+    align-self: center;
+    color: var(--theme-default-blackText);
+}
+
 .none{
     display: none;
 }

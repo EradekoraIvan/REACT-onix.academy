@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import style from './discounts.module.css';
 import CarouselView from '../../../../component/carousel/CarouselProducts';
 import essentialOil from '../../../../img/product/essential_oil.png';
@@ -24,9 +25,10 @@ function Discouts({
   disabledNext,
   innerRef
 }) {
+  const { t } = useTranslation();
   return (
     <CarouselView
-      heading="скики"
+      heading={t('discounts')}
       products={items}
       className={style.discountsContainer}
       prevHandler={prevHandler}

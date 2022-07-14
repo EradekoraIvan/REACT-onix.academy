@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import style from './recommend.module.css';
 import CarouselView from '../../../../component/carousel/CarouselProducts';
 import essentialOil from '../../../../img/product/essential_oil.png';
@@ -24,9 +25,10 @@ function Recommend({
   disabledNext,
   innerRef
 }) {
+  const { t } = useTranslation();
   return (
     <CarouselView
-      heading="мы рекомендуем"
+      heading={t('we_recommend')}
       products={items}
       className={style.recommendContainer}
       prevHandler={prevHandler}

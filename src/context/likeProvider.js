@@ -5,32 +5,22 @@ import React, {
 const LikeContext = createContext();
 
 export function LikeProvider({ children, ...props }) {
-  const [isLike, setIsLike] = useState(0);
-  const [likeId, setLikeId] = useState(JSON.parse(localStorage.getItem('likeArray')) || [])
-  
-  const counterLike = localStorage.getItem('likeCaunter') || 0;
-  
-  const changeIsLike = (value) => {
-    isLike ? setIsLike((prevIsLike) => prevIsLike + value) : setIsLike(JSON.parse(counterLike) + value);
-  };
-  const changeLikeId = (id) => {
-    const temp = [...likeId]
-    temp.push(id)
-    setLikeId(temp)
-    /*localStorage.setItem('likeArray', JSON.stringify(temp))*/
-  }
-  const dell = (index) => {
-    const temp = [...likeId]
-    temp.splice(index.index, 1)
-    setLikeId(temp)
-    /*localStorage.setItem('likeArray', JSON.stringify(temp))*/
-  }
+  const [likeId, setLikeId] = useState(JSON.parse(localStorage.getItem('likeArray')) || []);
 
-  useEffect(()=>{
-    localStorage.setItem('likeArray', JSON.stringify(likeId))
-    const x = JSON.parse(localStorage.getItem('likeArray')).length
-    console.log (x)
-  }, [changeLikeId, dell])
+  const changeLikeId = (id) => {
+    const temp = [...likeId];
+    temp.push(id);
+    setLikeId(temp);
+  };
+  const dell = (index) => {
+    const temp = [...likeId];
+    temp.splice(index.index, 1);
+    setLikeId(temp);
+  };
+
+  useEffect(() => {
+    localStorage.setItem('likeArray', JSON.stringify(likeId));
+  }, [changeLikeId, dell]);
 
   return (
     <LikeContext.Provider
@@ -38,8 +28,6 @@ export function LikeProvider({ children, ...props }) {
         likeId,
         changeLikeId,
         dell,
-        isLike,
-        changeIsLike
       }}
       {...props}
     >

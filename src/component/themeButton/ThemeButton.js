@@ -13,7 +13,7 @@ function ThemeButton() {
   const selectTheme = theme ? 'Light' : 'Dark';
   return (
     <div className={style.themeButtonWrapper}>
-      <button className={style.themeButtonLight} onClick={changeTheme}>{selectTheme}</button>
+      <button className={style.themeButton} onClick={changeTheme}>{selectTheme}</button>
     </div>
   );
 }

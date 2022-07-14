@@ -1,11 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './buy_button.css';
 
-class BuyButton extends React.Component {
-  render() {
-    return (
-      <button className="buy_button" type="button">Купить</button>
-    );
-  }
+function BuyButton() {
+  const { t } = useTranslation();
+  
+  return (
+    <button className="buy_button" type="button">{t('buy')}</button>
+  );
 }
 export default BuyButton;

@@ -1,0 +1,36 @@
+.lng-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.lng-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.lng-exit {
+    opacity: 1;
+}
+
+.lng-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.lngPos{
+    position: absolute;
+    top: 45px;
+    text-align: center;
+}
+
+.lngVar{
+    border-radius: 5px;
+    background: var(--theme-default-whitePart);
+    height: fit-content;
+    padding: 5px;
+    align-self: center;
+    color: var(--theme-default-blackText);
+    cursor: pointer;
+}

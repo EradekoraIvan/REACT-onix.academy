@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 import style from './novelties.module.css';
 import CarouselView from '../../../../component/carousel/CarouselProducts';
 import essentialOil from '../../../../img/product/essential_oil.png';
@@ -24,9 +25,10 @@ function Novelties({
   disabledNext,
   innerRef
 }) {
+  const { t } = useTranslation();
   return (
     <CarouselView
-      heading="новинки"
+      heading={t('novelties')}
       products={items}
       className={style.novelttiesContainer}
       prevHandler={prevHandler}
