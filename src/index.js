@@ -1,6 +1,8 @@
 import React from 'react';
 import './i18n/index';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import './index.css';
 import ThemeProvaider from './context/themeProvider';
 import LikeProvider from './context/likeProvider';
@@ -12,7 +14,9 @@ root.render(
   <React.StrictMode>
     <ThemeProvaider>
       <LikeProvider>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </LikeProvider>
     </ThemeProvaider>
   </React.StrictMode>
