@@ -1,7 +1,7 @@
 export const chengeCssVariables = (theme) => {
   const root = document.querySelector(':root');
 
-  const chengeCssVariables = [
+  const cssVariables = [
     'whitePart',
     'grayPart',
     'blackText',
@@ -9,7 +9,7 @@ export const chengeCssVariables = (theme) => {
     'blackArrow-border',
     'blackArrow-fill',
     'dot'];
-  chengeCssVariables.forEach((element) => {
+  cssVariables.forEach((element) => {
     root.style.setProperty(
       `--theme-default-${element}`,
       `var(--theme-${theme}-${element})`

@@ -1,0 +1,15 @@
+.RefreshButton {
+    border: 2px solid rgba(0, 0, 255, 0.499);
+    height: fit-content;
+    padding: 5px;
+    margin-bottom: 30px;
+    width: auto;
+    grid-column: 2/3;
+    justify-self: left;
+    align-self: flex-start;
+    color: var(--theme-default-blackText)
+}
+
+.RefreshButton:hover{
+    border-color: blue;
+}

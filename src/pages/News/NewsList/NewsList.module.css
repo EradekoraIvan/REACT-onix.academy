@@ -1,7 +1,11 @@
-.news_h1{
+.news_h1{ 
+    font-size: 50px;
+    margin-left: -3px;
+    color: var(--theme-default-blackText)
+}
+
+.news{
     grid-column: 2/3;
     justify-self: left;
-    font-size: 50px;
     margin: 0;
-    color: var(--theme-default-blackText)
 }

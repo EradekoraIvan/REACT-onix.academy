@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import photo from '../../../../img/reviews/Ivanov.png';
 import withCarousel from '../../../../HOC/withCarousel';
 import CarouselReviews from '../../../../component/carousel/CarouselReviews';
@@ -32,6 +33,14 @@ function Reviews({
       innerRef={innerRef}
     />
   );
+}
+
+Reviews.propTypes = {
+  prevHandler: PropTypes.func.isRequired,
+  nextHandler: PropTypes.func.isRequired,
+  disabledPrev: PropTypes.func.isRequired,
+  disabledNext: PropTypes.func.isRequired,
+  innerRef: PropTypes.element,
 }
 
 export default withCarousel(Reviews, reviewsImg);
