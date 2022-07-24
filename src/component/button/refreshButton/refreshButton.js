@@ -15,24 +15,18 @@ function Refresh({ goLoad }) {
       });
     }, 1000);
   }, [news]);
-  
+
   const loader = () => {
     setLoad((prevLoad) => {
       const valueLoad = !prevLoad;
       return valueLoad;
     });
- 
-    /* setTimeout(() => {
-      setLoad(() => {
-        return false;
-      });
-    }, [news]); */
   };
-  
+
   return (
     <Button
-      type="primary" 
-      className={style.RefreshButton} 
+      type="primary"
+      className={style.RefreshButton}
       loading={load}
       onClick={() => {
         goLoad();
